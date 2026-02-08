@@ -1106,7 +1106,6 @@ footer a:hover {
   .legend { font-size: 0.65rem; gap: 0.5rem; }
   .theme-toggle { top: 0.5rem; right: 0.5rem; font-size: 0.75rem; padding: 0.5rem 0.75rem; min-height: 44px; }
   .sources-grid { columns: 1; }
-  .headless-grid { grid-template-columns: 1fr; }
   .headless-card-header { flex-wrap: wrap; gap: 0.5rem; }
 
   /* Hide scroll-down hint on mobile — users intuitively scroll */
@@ -1453,6 +1452,10 @@ footer a:hover {
 .meta-val {
   color: var(--text-dim);
   line-height: 1.45;
+}
+
+@media (max-width: 768px) {
+  .headless-grid { grid-template-columns: 1fr; }
 }
 
 /* ========== QFD MATRIX ========== */
