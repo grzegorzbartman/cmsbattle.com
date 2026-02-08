@@ -7,7 +7,7 @@ description: Update CMS release versions and dates in data/releases.json. Use wh
 
 ## What This Does
 
-Updates `data/releases.json` with the latest release version and date for each of the 14 CMS platforms tracked in this comparison project.
+Updates `data/releases.json` with the latest release version and date for each of the 15 CMS platforms tracked in this comparison project.
 
 ## Quick Reference: Where to Check
 
@@ -24,6 +24,7 @@ Updates `data/releases.json` with the latest release version and date for each o
 | **Joomla** | [downloads.joomla.org](https://downloads.joomla.org/) | [github.com/joomla/joomla-cms/releases](https://github.com/joomla/joomla-cms/releases) |
 | **KeystoneJS** | [github.com/keystonejs/keystone/releases](https://github.com/keystonejs/keystone/releases) | [keystonejs.com/releases](https://keystonejs.com/releases) |
 | **October CMS** | [github.com/octobercms/october/releases](https://github.com/octobercms/october/releases) | [octobercms.com/changelog](https://octobercms.com/changelog) |
+| **Plone** | [plone.org/download/releases](https://plone.org/download/releases) | [github.com/plone/Products.CMFPlone/releases](https://github.com/plone/Products.CMFPlone/releases) |
 | **Directus** | [github.com/directus/directus/releases](https://github.com/directus/directus/releases) | [directus.io/docs/releases](https://directus.io/docs/releases) |
 | **Umbraco** | [github.com/umbraco/Umbraco-CMS/releases](https://github.com/umbraco/Umbraco-CMS/releases) | [releases.umbraco.com](https://releases.umbraco.com) |
 | **Wagtail** | [github.com/wagtail/wagtail/releases](https://github.com/wagtail/wagtail/releases) | [docs.wagtail.org/en/latest/releases](https://docs.wagtail.org/en/latest/releases/) |
@@ -55,6 +56,7 @@ Tips:
 - **Strapi**: Releases are frequent (weekly). Check GitHub tags. Package is `v5.x.x`.
 - **Sulu CMS**: Monthly release cadence. Version is `3.x.x`. Also maintains `2.6.x` LTS branch. Check GitHub releases or sulu.io/blog.
 - **Payload**: Very active development, multiple releases per week. Version is `v3.x.x`.
+- **Plone**: Quarterly release cadence. Version is `6.x.x`. Check plone.org/download/releases or PyPI. Code split across many repos — use the meta-package version.
 - **Ghost**: Monthly release cadence. Version is `6.x.x`. Check GitHub releases or ghost.org/changelog.
 - **Joomla**: Current major is `6.x`. Also maintains `5.x` LTS. Check downloads.joomla.org.
 - **KeystoneJS**: Slow release cadence -- may not have changed. Package is `@keystone-6/core`. If no new release, add/update the `note` field.
