@@ -74,7 +74,7 @@
   box-sizing: border-box;
 }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
 
 body {
   font-family: var(--font-body);
@@ -83,6 +83,7 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   transition: background 0.3s, color 0.3s;
+  overflow-x: hidden;
 }
 
 ::selection {
@@ -1103,10 +1104,70 @@ footer a:hover {
   .wizard-section { padding: 1.25rem; }
   section { padding: 2.5rem 1rem; }
   .legend { font-size: 0.65rem; gap: 0.5rem; }
-  .theme-toggle { top: 0.5rem; right: 0.5rem; font-size: 0.65rem; padding: 0.3rem 0.5rem; }
+  .theme-toggle { top: 0.5rem; right: 0.5rem; font-size: 0.75rem; padding: 0.5rem 0.75rem; min-height: 44px; }
   .sources-grid { columns: 1; }
   .headless-grid { grid-template-columns: 1fr; }
   .headless-card-header { flex-wrap: wrap; gap: 0.5rem; }
+
+  /* Hide scroll-down hint on mobile — users intuitively scroll */
+  .scroll-hint { display: none; }
+
+  /* Increase tap target for release date links */
+  .cms-card .release-date a { padding: 0.5rem 0; display: inline-block; }
+
+  /* Sticky Feature column in comparison tables */
+  .comp-table th:first-child,
+  .comp-table td:first-child {
+    position: sticky;
+    left: 0;
+    z-index: 2;
+    background: var(--surface);
+  }
+
+  .comp-table tbody tr:hover td:first-child {
+    background: var(--bg2);
+  }
+
+  /* Scroll indicator gradient on comparison tables */
+  .category-block.open {
+    position: relative;
+  }
+
+  .category-block.open::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 30px;
+    background: linear-gradient(to right, transparent, var(--surface));
+    pointer-events: none;
+    z-index: 3;
+    border-radius: 0 var(--radius) var(--radius) 0;
+  }
+
+  /* Scroll indicator gradient on metrics table */
+  .metrics-table-wrap {
+    background:
+      linear-gradient(to right, var(--surface), var(--surface)) left / 20px 100% no-repeat local,
+      linear-gradient(to left, var(--surface), var(--surface)) right / 20px 100% no-repeat local,
+      radial-gradient(farthest-side at 0 50%, rgba(0,0,0,.12), transparent) left / 12px 100% no-repeat scroll,
+      radial-gradient(farthest-side at 100% 50%, rgba(0,0,0,.12), transparent) right / 12px 100% no-repeat scroll;
+  }
+
+  /* Scroll indicator gradient on nav */
+  .nav::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 30px;
+    background: linear-gradient(to right, transparent, var(--bg));
+    pointer-events: none;
+    z-index: 101;
+  }
+
 }
 
 /* ========== METRICS TABLE ========== */
