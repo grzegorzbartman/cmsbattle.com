@@ -387,6 +387,71 @@ h1 .highlight {
   border-bottom-color: var(--accent);
 }
 
+/* ========== MOBILE BOTTOM NAV ========== */
+.mobile-nav {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+
+  .mobile-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: var(--bg);
+    border-top: 1px solid var(--border);
+    padding: 0.4rem 0;
+    padding-bottom: calc(0.4rem + env(safe-area-inset-bottom, 0px));
+    transition: background 0.3s;
+  }
+
+  [data-theme="dark"] .mobile-nav {
+    background: rgba(13,17,23,0.95);
+    backdrop-filter: blur(12px);
+  }
+
+  .mobile-nav a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+    text-decoration: none;
+    color: var(--text-dim);
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    padding: 0.3rem 0.5rem;
+    border-radius: 6px;
+    transition: color 0.15s;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .mobile-nav a svg {
+    transition: color 0.15s;
+  }
+
+  .mobile-nav a.active {
+    color: var(--accent);
+  }
+
+  .mobile-nav a.active svg {
+    color: var(--accent);
+  }
+
+  body {
+    padding-bottom: calc(60px + env(safe-area-inset-bottom, 0px));
+  }
+}
+
 /* ========== SECTIONS ========== */
 section {
   max-width: 1400px;
@@ -1152,19 +1217,6 @@ footer a:hover {
       linear-gradient(to left, var(--surface), var(--surface)) right / 20px 100% no-repeat local,
       radial-gradient(farthest-side at 0 50%, rgba(0,0,0,.12), transparent) left / 12px 100% no-repeat scroll,
       radial-gradient(farthest-side at 100% 50%, rgba(0,0,0,.12), transparent) right / 12px 100% no-repeat scroll;
-  }
-
-  /* Scroll indicator gradient on nav */
-  .nav::after {
-    content: '';
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 30px;
-    background: linear-gradient(to right, transparent, var(--bg));
-    pointer-events: none;
-    z-index: 101;
   }
 
 }

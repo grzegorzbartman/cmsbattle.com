@@ -514,9 +514,9 @@ document.addEventListener('alpine:init', () => {
   }));
 
   // ==========================
-  // ALPINE DATA: NAV SCROLLER
+  // ALPINE STORE: NAV (shared scroll spy state)
   // ==========================
-  Alpine.data('navScroller', () => ({
+  Alpine.store('nav', {
     currentSection: '',
 
     init() {
@@ -537,6 +537,6 @@ document.addEventListener('alpine:init', () => {
     isActive(href) {
       return href === '#' + this.currentSection;
     }
-  }));
+  });
 
 });
