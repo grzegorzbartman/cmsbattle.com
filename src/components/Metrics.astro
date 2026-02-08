@@ -1,0 +1,118 @@
+---
+interface Props {
+  releases: any;
+  metrics: any;
+}
+
+const { releases, metrics } = Astro.props;
+
+const cmsOrder = ['craft', 'directus', 'drupal', 'ghost', 'joomla', 'keystone', 'october', 'payload', 'strapi', 'sulu', 'typo3', 'wagtail', 'wordpress'];
+
+const cmsColors: Record<string, string> = {
+  craft: 'var(--craft)',
+  directus: 'var(--directus)',
+  drupal: 'var(--drupal)',
+  ghost: 'var(--ghost)',
+  joomla: 'var(--joomla)',
+  keystone: 'var(--keystone)',
+  october: 'var(--october)',
+  payload: 'var(--payload)',
+  strapi: 'var(--strapi)',
+  sulu: 'var(--sulu)',
+  typo3: 'var(--typo3)',
+  wagtail: 'var(--wagtail)',
+  wordpress: 'var(--wordpress)',
+};
+---
+
+<section id="metrics">
+  <div class="section-header">
+    <div class="section-tag">01b &mdash; hard numbers</div>
+    <h2>Scale &amp; ecosystem metrics</h2>
+    <p class="section-desc">GitHub stars, contributors, plugin counts, project age and market share &mdash; hard data showing each platform's scale and community health.</p>
+  </div>
+
+  <div class="metrics-table-wrap">
+    <table class="metrics-table">
+      <thead>
+        <tr>
+          <th class="mt-cms">CMS</th>
+          <th class="mt-num">⭐ Stars</th>
+          <th class="mt-num">👥 Contributors</th>
+          <th class="mt-num">🧩 Extensions</th>
+          <th class="mt-num">📅 Since</th>
+          <th class="mt-num">🌐 Market share</th>
+          <th class="mt-num">🏠 Sites</th>
+        </tr>
+      </thead>
+      <tbody>
+        {cmsOrder.map(key => {
+          const m = metrics[key];
+          const r = releases[key];
+          return (
+            <tr>
+              <td class="mt-cms-cell">
+                <span class="mt-dot" style={`background: ${cmsColors[key]}`}></span>
+                <a href={r.github} target="_blank" rel="noopener noreferrer" class="mt-name mt-repo-link" title={`${r.name} repository`}>{r.name}<svg class="mt-external-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 3H3v10h10v-3M9 2h5v5M14 2L7 9"/></svg></a>
+              </td>
+              <td class="mt-num">
+                <span class="mt-value">{m.github_stars}</span>
+                {m.github_stars_note && (
+                  <span class="mt-note" title={m.github_stars_note}>{m.github_stars_note}</span>
+                )}
+              </td>
+              <td class="mt-num">
+                <span class="mt-value">{m.contributors}</span>
+                {m.contributors_note && (
+                  <span class="mt-note" title={m.contributors_note}>{m.contributors_note}</span>
+                )}
+              </td>
+              <td class="mt-num">
+                <span class="mt-value">{m.extensions}</span>
+                <span class="mt-note">{m.extensions_label}</span>
+              </td>
+              <td class="mt-num">
+                <span class="mt-value">{m.first_release}</span>
+                <span class="mt-note">{m.age_years} years</span>
+              </td>
+              <td class="mt-num">
+                {m.market_share ? (
+                  <>
+                    <span class={`mt-value ${m.market_share === '62%' ? 'mt-highlight' : ''}`}>{m.market_share}</span>
+                    {m.market_share_note && (
+                      <span class="mt-note">{m.market_share_note}</span>
+                    )}
+                  </>
+                ) : (
+                  <>
+                    <span class="mt-na">n/a</span>
+                    <span class="mt-note">headless — no W3Techs tracking</span>
+                  </>
+                )}
+              </td>
+              <td class="mt-num">
+                {m.sites ? (
+                  <>
+                    <span class={`mt-value ${m.sites === '~500M' ? 'mt-highlight' : ''}`}>{m.sites}</span>
+                    {m.sites_note && (
+                      <span class="mt-note">{m.sites_note}</span>
+                    )}
+                  </>
+                ) : (
+                  <span class="mt-na">n/a</span>
+                )}
+              </td>
+            </tr>
+          );
+        })}
+      </tbody>
+    </table>
+  </div>
+
+  <div class="method-note" style="margin-top: 1.5rem;">
+    <div class="note-icon">!</div>
+    <div>
+      <strong>Context matters:</strong> GitHub stars for Drupal/WordPress/Joomla are misleadingly low because primary development happens outside GitHub (drupal.org, Trac/SVN, etc.). Market share is tracked by W3Techs only for server-rendered CMS &mdash; headless platforms are invisible to this metric. Extension counts vary wildly in quality.
+    </div>
+  </div>
+</section>

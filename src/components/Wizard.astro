@@ -1,0 +1,181 @@
+<section id="wizard" x-data="qfdWizard">
+  <div class="section-header">
+    <div class="section-tag">04 &mdash; QFD decision matrix</div>
+    <h2>Find the right CMS for you</h2>
+    <p class="section-desc">QFD (Quality Function Deployment) is a structured decision-making methodology developed in Japan, widely used in engineering and product management to translate customer needs into measurable technical parameters. Instead of comparing features in a flat list, QFD weights each requirement by its real importance to your project &mdash; so a feature that matters 9x gets 9x the influence on the final score. This eliminates gut-feeling bias and produces transparent, reproducible, and defensible results you can share with stakeholders.</p>
+    <p class="section-desc" style="margin-top:0.5rem">Select categories that matter to your project, adjust importance weights (1-9), and optionally expand each category to include or exclude individual features. The matrix auto-calculates scores from the comparison data above.</p>
+  </div>
+
+  <div class="wizard-section">
+
+    <!-- Category Selection Panel -->
+    <div class="qfd-requirements">
+      <h3 class="qfd-panel-title">1. Select categories that matter</h3>
+
+      <div class="qfd-req-grid">
+        <template x-for="(cat, catIdx) in categories" :key="catIdx">
+          <div class="wizard-opt" :class="{ 'selected': enabled[catIdx] }">
+            <div class="qfd-cat-card-header" @click="toggleCategory(catIdx)">
+              <h4><span x-text="cat.icon"></span> <span x-text="cat.name"></span></h4>
+              <p><span x-text="cat.features.length"></span> features</p>
+            </div>
+
+            <!-- Importance slider + expand button (only rendered when enabled) -->
+            <template x-if="enabled[catIdx]">
+              <div class="qfd-importance-control" @click.stop>
+                <label>Importance:</label>
+                <input type="range" min="1" max="9" :value="importance[catIdx]"
+                  @input="setImportance(catIdx, $event.target.value)"
+                  class="importance-slider">
+                <span class="importance-badge" :style="'color:' + importanceColor(importance[catIdx])"
+                  x-text="importance[catIdx]"></span>
+                <button class="qfd-expand-btn" @click="toggleExpand(catIdx)"
+                  :title="expanded[catIdx] ? 'Collapse features' : 'Expand features'">
+                  <span x-text="expanded[catIdx] ? '▲' : '▼'"></span>
+                  <span x-text="enabledFeatureCount(catIdx) + '/' + totalFeatureCount(catIdx)"></span>
+                </button>
+              </div>
+            </template>
+
+            <!-- Expandable feature list (only rendered when enabled+expanded) -->
+            <template x-if="enabled[catIdx] && expanded[catIdx]">
+              <div class="qfd-feature-list" @click.stop>
+                <template x-for="(feat, featIdx) in cat.features" :key="featIdx">
+                  <label class="qfd-feature-item" :class="{ 'qfd-feature-disabled': isFeatureDisabled(catIdx, featIdx) }">
+                    <input type="checkbox"
+                      :checked="!isFeatureDisabled(catIdx, featIdx)"
+                      @change="toggleFeature(catIdx, featIdx)">
+                    <span x-text="feat.name"></span>
+                  </label>
+                </template>
+              </div>
+            </template>
+          </div>
+        </template>
+      </div>
+
+      <!-- Custom requirements -->
+      <div class="qfd-custom-section">
+        <template x-for="req in customRequirements" :key="req.id">
+          <div class="qfd-custom-item">
+            <div class="qfd-custom-header">
+              <strong x-text="req.title"></strong>
+              <span class="qfd-custom-desc" x-text="req.desc" x-show="req.desc"></span>
+              <button class="qfd-remove-btn" @click="removeCustomRequirement(req.id)" title="Remove">&times;</button>
+            </div>
+            <div class="qfd-custom-controls">
+              <div class="qfd-importance-control">
+                <label>Importance:</label>
+                <input type="range" min="1" max="9" :value="req.importance"
+                  @input="setCustomImportance(req.id, $event.target.value)"
+                  class="importance-slider">
+                <span class="importance-badge" :style="'color:' + importanceColor(req.importance)"
+                  x-text="req.importance"></span>
+              </div>
+              <div class="qfd-score-inputs">
+                <template x-for="key in cmsKeys" :key="key">
+                  <div class="qfd-score-input">
+                    <label x-text="cmsShort[key]"></label>
+                    <input type="number" min="0" max="10" :value="req.scores[key]"
+                      @input="setCustomScore(req.id, key, $event.target.value)">
+                  </div>
+                </template>
+              </div>
+            </div>
+          </div>
+        </template>
+
+        <button class="qfd-add-btn" @click="showAddCustom = !showAddCustom" x-show="!showAddCustom">
+          + Add custom requirement
+        </button>
+
+        <div class="qfd-add-form" x-show="showAddCustom" x-transition>
+          <div class="qfd-form-row">
+            <input type="text" x-model="newCustomTitle" placeholder="Requirement title" class="qfd-input">
+            <input type="text" x-model="newCustomDesc" placeholder="Short description (optional)" class="qfd-input">
+          </div>
+          <div class="qfd-score-inputs">
+            <template x-for="key in cmsKeys" :key="key">
+              <div class="qfd-score-input">
+                <label x-text="cmsShort[key]"></label>
+                <input type="number" min="0" max="10" :value="newCustomScores[key]"
+                  @input="newCustomScores[key] = parseInt($event.target.value)">
+              </div>
+            </template>
+          </div>
+          <div class="qfd-form-actions">
+            <button class="qfd-confirm-btn" @click="addCustomRequirement()">Add requirement</button>
+            <button class="qfd-cancel-btn" @click="showAddCustom = false">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- QFD Matrix Table (only rendered when there are active requirements) -->
+    <template x-if="hasActiveRequirements">
+      <div class="qfd-matrix-wrap">
+        <h3 class="qfd-panel-title">2. QFD Decision Matrix</h3>
+        <div class="qfd-matrix-scroll" x-html="renderQfdTable()">
+        </div>
+      </div>
+    </template>
+
+    <!-- Results (only rendered when there are active requirements) -->
+    <template x-if="hasActiveRequirements">
+      <div class="qfd-results">
+        <h3 class="qfd-panel-title">3. Results</h3>
+        <div class="wizard-result visible">
+          <h3 x-show="winner">$ recommend: <span x-text="winner ? cmsNames[winner.key] : ''"></span></h3>
+          <p class="rec-why" x-show="winner">
+            Based on your <span x-text="activeRequirements.length"></span> weighted priorities,
+            <strong x-text="winner ? cmsNames[winner.key] : ''"></strong> scores highest
+            with <strong x-text="winner ? winner.score : 0"></strong> weighted points.
+          </p>
+
+          <div class="qfd-bar-chart">
+            <template x-for="item in sortedResults" :key="item.key">
+              <div class="qfd-bar-row">
+                <div class="qfd-bar-label" x-text="cmsNames[item.key]"></div>
+                <div class="qfd-bar-track">
+                  <div class="qfd-bar-fill"
+                    :class="{ 'qfd-bar-winner': winner && item.key === winner.key }"
+                    :style="'width:' + barWidth(item.score)">
+                    <span class="qfd-bar-pts" x-text="item.score + 'pts'"></span>
+                  </div>
+                </div>
+              </div>
+            </template>
+          </div>
+
+          <div class="rec-alt" x-show="alternative">
+            // alternative: <strong x-text="alternative ? cmsNames[alternative.key] : ''"></strong>
+            (<span x-text="alternative ? alternative.score : 0"></span> pts)
+            &mdash; consider if <span x-text="alternative ? altReason(alternative.key) : ''"></span>.
+          </div>
+        </div>
+      </div>
+    </template>
+
+    <!-- Notes -->
+    <div class="qfd-notes-section">
+      <h3 class="qfd-panel-title">4. Notes</h3>
+      <textarea class="qfd-notes" x-model="notes" @input="_debouncedUpdateURL()"
+        placeholder="Add your notes here... (e.g. team decisions, context, constraints)"
+        rows="4"></textarea>
+      <p class="qfd-notes-disclaimer">
+        These notes are <strong>not stored</strong> in any database. They are encoded in the shareable URL.
+        Use the share link below to save your analysis and share it with your team or on the internet.
+      </p>
+    </div>
+
+    <!-- Share Link -->
+    <div class="qfd-share-section" x-show="hasActiveRequirements || notes.trim()" x-cloak>
+      <button class="qfd-share-btn" @click="copyShareLink()">
+        <span x-show="!copied">&#128279; Copy shareable link</span>
+        <span x-show="copied" class="qfd-copied-feedback">&#10003; Copied!</span>
+      </button>
+      <p class="qfd-share-hint">Link contains all selections, weights, custom requirements, and notes.</p>
+    </div>
+
+  </div>
+</section>

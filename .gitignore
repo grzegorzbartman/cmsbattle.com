@@ -1,0 +1,17 @@
+# Astro / Node.js
+node_modules/
+dist/
+.astro/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# OS
+.DS_Store
+
+# Cursor
+.cursor/plans/
+
+tmp/*

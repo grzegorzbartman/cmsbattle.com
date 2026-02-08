@@ -1,0 +1,158 @@
+---
+interface Props {
+  releases: any;
+}
+
+const { releases } = Astro.props;
+---
+
+<section id="overview">
+  <div class="section-header">
+    <div class="section-tag">01 &mdash; overview</div>
+    <h2>The contenders</h2>
+    <p class="section-desc">Eight traditional (full-stack) CMS platforms and five headless/API-first CMS platforms compared across 110 features in 24 categories.</p>
+  </div>
+
+  <div class="cms-overview">
+    <div class="cms-card" style="--card-color: var(--craft)">
+      <h3>Craft CMS</h3>
+      <div class="version">v{releases.craft.latest_version} &middot; PHP</div>
+      <div class="release-date">
+        <a href={releases.craft.release_url} target="_blank">released {releases.craft.release_date}</a>
+      </div>
+      <div class="tech"><span>PHP 8.2+</span><span>Yii 2</span><span>MySQL/PgSQL</span></div>
+      <span class="type-badge type-traditional">Full-stack CMS</span>
+    </div>
+
+    <div class="cms-card" style="--card-color: var(--directus)">
+      <h3>Directus</h3>
+      <div class="version">v{releases.directus.latest_version} &middot; Node.js</div>
+      <div class="release-date">
+        <a href={releases.directus.release_url} target="_blank">released {releases.directus.release_date}</a>
+      </div>
+      <div class="tech"><span>Node.js</span><span>Vue.js</span><span>PgSQL/MySQL/SQLite</span></div>
+      <span class="type-badge type-headless">Database Wrapper CMS</span>
+    </div>
+
+    <div class="cms-card" style="--card-color: var(--drupal)">
+      <h3>Drupal</h3>
+      <div class="version">v{releases.drupal.latest_version} &middot; PHP</div>
+      <div class="release-date">
+        <a href={releases.drupal.release_url} target="_blank">released {releases.drupal.release_date}</a>
+      </div>
+      <div class="tech"><span>PHP 8.3+</span><span>Symfony</span><span>MySQL/PgSQL</span></div>
+      <span class="type-badge type-traditional">Full-stack CMS</span>
+    </div>
+
+    <div class="cms-card" style="--card-color: var(--ghost)">
+      <h3>Ghost</h3>
+      <div class="version">v{releases.ghost.latest_version} &middot; Node.js</div>
+      <div class="release-date">
+        <a href={releases.ghost.release_url} target="_blank">released {releases.ghost.release_date}</a>
+      </div>
+      <div class="tech"><span>Node.js</span><span>Express</span><span>MySQL/SQLite</span></div>
+      <span class="type-badge type-headless">Publishing CMS</span>
+    </div>
+
+    <div class="cms-card" style="--card-color: var(--joomla)">
+      <h3>Joomla</h3>
+      <div class="version">v{releases.joomla.latest_version} &middot; PHP</div>
+      <div class="release-date">
+        <a href={releases.joomla.release_url} target="_blank">released {releases.joomla.release_date}</a>
+      </div>
+      <div class="tech"><span>PHP 8.x</span><span>MySQL/PgSQL</span><span>MVC</span></div>
+      <span class="type-badge type-traditional">Full-stack CMS</span>
+    </div>
+
+    <div class="cms-card" style="--card-color: var(--keystone)">
+      <h3>KeystoneJS</h3>
+      <div class="version">v{releases.keystone.latest_version} &middot; Node.js</div>
+      <div class="release-date">
+        <a href={releases.keystone.release_url} target="_blank">released {releases.keystone.release_date}</a>
+        {releases.keystone.note && (
+          <span class="release-warn">{releases.keystone.note}</span>
+        )}
+      </div>
+      <div class="tech"><span>TypeScript</span><span>Prisma</span><span>PgSQL/SQLite</span></div>
+      <span class="type-badge type-headless">Headless CMS</span>
+    </div>
+
+    <div class="cms-card" style="--card-color: var(--october)">
+      <h3>October CMS</h3>
+      <div class="version">v{releases.october.latest_version} &middot; PHP</div>
+      <div class="release-date">
+        <a href={releases.october.release_url} target="_blank">released {releases.october.release_date}</a>
+      </div>
+      <div class="tech"><span>PHP 8.2+</span><span>Laravel</span><span>MySQL/PgSQL/SQLite</span></div>
+      <span class="type-badge type-traditional">Full-stack CMS</span>
+    </div>
+
+    <div class="cms-card" style="--card-color: var(--payload)">
+      <h3>Payload</h3>
+      <div class="version">v{releases.payload.latest_version} &middot; Next.js</div>
+      <div class="release-date">
+        <a href={releases.payload.release_url} target="_blank">released {releases.payload.release_date}</a>
+      </div>
+      <div class="tech"><span>TypeScript</span><span>Next.js</span><span>MongoDB/PgSQL</span></div>
+      <span class="type-badge type-headless">Headless CMS + Framework</span>
+    </div>
+
+    <div class="cms-card" style="--card-color: var(--strapi)">
+      <h3>Strapi</h3>
+      <div class="version">v{releases.strapi.latest_version} &middot; Node.js</div>
+      <div class="release-date">
+        <a href={releases.strapi.release_url} target="_blank">released {releases.strapi.release_date}</a>
+      </div>
+      <div class="tech"><span>Node.js</span><span>Koa</span><span>SQLite/PgSQL/MySQL</span></div>
+      <span class="type-badge type-headless">Headless CMS</span>
+    </div>
+
+    <div class="cms-card" style="--card-color: var(--sulu)">
+      <h3>Sulu CMS</h3>
+      <div class="version">v{releases.sulu.latest_version} &middot; PHP</div>
+      <div class="release-date">
+        <a href={releases.sulu.release_url} target="_blank">released {releases.sulu.release_date}</a>
+      </div>
+      <div class="tech"><span>PHP 8.2+</span><span>Symfony</span><span>MySQL/PgSQL</span></div>
+      <span class="type-badge type-traditional">Full-stack CMS</span>
+    </div>
+
+    <div class="cms-card" style="--card-color: var(--typo3)">
+      <h3>TYPO3</h3>
+      <div class="version">v{releases.typo3.latest_version} &middot; PHP</div>
+      <div class="release-date">
+        <a href={releases.typo3.release_url} target="_blank">released {releases.typo3.release_date}</a>
+      </div>
+      <div class="tech"><span>PHP 8.3+</span><span>Doctrine</span><span>MySQL/PgSQL</span></div>
+      <span class="type-badge type-traditional">Full-stack CMS</span>
+    </div>
+
+    <div class="cms-card" style="--card-color: var(--wagtail)">
+      <h3>Wagtail</h3>
+      <div class="version">v{releases.wagtail.latest_version} &middot; Python</div>
+      <div class="release-date">
+        <a href={releases.wagtail.release_url} target="_blank">released {releases.wagtail.release_date}</a>
+      </div>
+      <div class="tech"><span>Python 3.9+</span><span>Django</span><span>PostgreSQL/SQLite</span></div>
+      <span class="type-badge type-traditional">Full-stack CMS</span>
+    </div>
+
+    <div class="cms-card" style="--card-color: var(--wordpress)">
+      <h3>WordPress</h3>
+      <div class="version">v{releases.wordpress.latest_version} &middot; PHP</div>
+      <div class="release-date">
+        <a href={releases.wordpress.release_url} target="_blank">released {releases.wordpress.release_date}</a>
+      </div>
+      <div class="tech"><span>PHP 8.x</span><span>MySQL/MariaDB</span><span>Gutenberg</span></div>
+      <span class="type-badge type-traditional">Full-stack CMS</span>
+    </div>
+  </div>
+
+  <div class="method-note">
+    <div class="note-icon">i</div>
+    <div>
+      <strong>Release data last checked:</strong> {releases._meta.last_checked}.
+      Versions and dates sourced from official release pages and GitHub.
+    </div>
+  </div>
+</section>

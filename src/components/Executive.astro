@@ -1,0 +1,37 @@
+<section id="executive" x-data="executiveSummaries">
+  <div class="section-header">
+    <div class="section-tag">05 &mdash; executive summary</div>
+    <h2>Summary for decision makers</h2>
+  </div>
+  <div class="exec-grid">
+    <template x-for="cms in executives" :key="cms.name">
+      <div class="exec-card" :style="'--card-color:' + cms.color">
+        <h3 x-text="cms.name"></h3>
+        <div class="exec-block">
+          <h4>+ strengths</h4>
+          <ul>
+            <template x-for="s in cms.strengths" :key="s">
+              <li x-text="s"></li>
+            </template>
+          </ul>
+        </div>
+        <div class="exec-block">
+          <h4>- weaknesses</h4>
+          <ul>
+            <template x-for="w in cms.weaknesses" :key="w">
+              <li x-text="w"></li>
+            </template>
+          </ul>
+        </div>
+        <div class="exec-block">
+          <h4>&gt; best_for</h4>
+          <p x-text="cms.bestFor"></p>
+        </div>
+        <div class="exec-block">
+          <h4>! avoid_if</h4>
+          <p x-text="cms.avoidIf"></p>
+        </div>
+      </div>
+    </template>
+  </div>
+</section>

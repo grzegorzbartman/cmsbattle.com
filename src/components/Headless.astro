@@ -1,0 +1,377 @@
+<section id="headless-hybrid">
+  <div class="section-header">
+    <div class="section-tag">03b &mdash; headless mode</div>
+    <h2>Full-stack CMS as headless / hybrid</h2>
+    <p class="section-desc">All eight traditional CMS platforms can also serve content via API, working as headless or hybrid (server-rendered + API) systems. Here's how they compare in that mode.</p>
+  </div>
+
+  <div class="headless-grid">
+
+    <!-- CRAFT CMS -->
+    <div class="headless-card" style="--card-color: var(--craft)">
+      <div class="headless-card-header">
+        <h3>Craft CMS</h3>
+        <span class="headless-verdict headless-good">Good headless</span>
+      </div>
+      <p class="headless-desc">Craft CMS ships with a built-in GraphQL API since v3.3, enabling full headless mode. Content is queryable via a self-documenting GraphiQL IDE. A fully-headless mode disables the frontend entirely.</p>
+      <div class="headless-apis">
+        <div class="api-item api-core">
+          <span class="api-label">GraphQL</span>
+          <span class="api-status">Core</span>
+          <span class="api-detail">Full schema with queries, mutations (Pro). GraphiQL IDE, configurable public/private schemas, token-based access.</span>
+        </div>
+        <div class="api-item api-contrib">
+          <span class="api-label">REST</span>
+          <span class="api-status">Plugin</span>
+          <span class="api-detail">Element API plugin. Exposes entries, assets, categories as JSON endpoints. Configurable per element type.</span>
+        </div>
+      </div>
+      <div class="headless-meta">
+        <div class="meta-row">
+          <span class="meta-label">Hybrid mode</span>
+          <span class="meta-val">Yes &mdash; Twig server-side templates + GraphQL API for JS components or external consumers</span>
+        </div>
+        <div class="meta-row">
+          <span class="meta-label">Popular frontends</span>
+          <span class="meta-val">Next.js, Nuxt, Gatsby, Astro, React SPA, Vue SPA</span>
+        </div>
+        <div class="meta-row">
+          <span class="meta-label">SDKs / helpers</span>
+          <span class="meta-val">CraftQL (community), custom GraphQL fetch, gatsby-source-craft</span>
+        </div>
+        <div class="meta-row">
+          <span class="meta-label">Auth for API</span>
+          <span class="meta-val">GraphQL tokens (bearer), session-based, custom auth via plugins</span>
+        </div>
+        <div class="meta-row">
+          <span class="meta-label">Headless maturity</span>
+          <span class="meta-val">GraphQL since 2019 (v3.3). Mature, production-proven. Fully-headless mode available.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- DRUPAL -->
+    <div class="headless-card" style="--card-color: var(--drupal)">
+      <div class="headless-card-header">
+        <h3>Drupal</h3>
+        <span class="headless-verdict headless-yes">Excellent headless</span>
+      </div>
+      <p class="headless-desc">Drupal was among the first traditional CMS platforms to embrace "API-first" as a core initiative. Since Drupal 8, every entity is exposed via JSON:API out of the box.</p>
+      <div class="headless-apis">
+        <div class="api-item api-core">
+          <span class="api-label">JSON:API</span>
+          <span class="api-status">Core</span>
+          <span class="api-detail">Full CRUD, filtering, includes, pagination. Follows jsonapi.org spec. Zero config.</span>
+        </div>
+        <div class="api-item api-core">
+          <span class="api-label">REST</span>
+          <span class="api-status">Core</span>
+          <span class="api-detail">RESTful Web Services module. HAL+JSON, XML support. Configurable per entity/method.</span>
+        </div>
+        <div class="api-item api-contrib">
+          <span class="api-label">GraphQL</span>
+          <span class="api-status">Module</span>
+          <span class="api-detail">graphql module (contrib). Full schema, queries, mutations. Mature &amp; production-ready.</span>
+        </div>
+      </div>
+      <div class="headless-meta">
+        <div class="meta-row">
+          <span class="meta-label">Hybrid mode</span>
+          <span class="meta-val">Yes &mdash; Twig server-side + API for JS components (BigPipe, decoupled blocks)</span>
+        </div>
+        <div class="meta-row">
+          <span class="meta-label">Popular frontends</span>
+          <span class="meta-val">Next.js (next-drupal), Gatsby, Nuxt, React, custom SPA</span>
+        </div>
+        <div class="meta-row">
+          <span class="meta-label">SDKs / helpers</span>
+          <span class="meta-val">next-drupal, drupal-jsonapi-params, Drupal State (JS), Lupus Decoupled Drupal</span>
+        </div>
+        <div class="meta-row">
+          <span class="meta-label">Auth for API</span>
+          <span class="meta-val">OAuth 2.0, JWT (contrib), session cookies, basic auth</span>
+        </div>
+        <div class="meta-row">
+          <span class="meta-label">Headless maturity</span>
+          <span class="meta-val">Production-proven since 2017. Official "API-first" initiative.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- OCTOBER CMS -->
+    <div class="headless-card" style="--card-color: var(--october)">
+      <div class="headless-card-header">
+        <h3>October CMS</h3>
+        <span class="headless-verdict headless-partial">Basic headless</span>
+      </div>
+      <p class="headless-desc">October CMS is built on Laravel and primarily serves content via Twig templates. Headless mode requires building custom REST API routes via Laravel controllers. No auto-generated API by default.</p>
+      <div class="headless-apis">
+        <div class="api-item api-core">
+          <span class="api-label">REST API</span>
+          <span class="api-status">Custom</span>
+          <span class="api-detail">Custom Laravel API routes. No auto-generated endpoints. Full CRUD possible via Eloquent models and controllers.</span>
+        </div>
+        <div class="api-item api-plugin">
+          <span class="api-label">GraphQL</span>
+          <span class="api-status">Plugin</span>
+          <span class="api-detail">Community GraphQL plugin available. Not widely adopted.</span>
+        </div>
+      </div>
+      <div class="headless-meta">
+        <div class="meta-row">
+          <span class="meta-label">Hybrid mode</span>
+          <span class="meta-val">Yes &mdash; Twig server-side templates + custom API routes for JS components or external consumers</span>
+        </div>
+        <div class="meta-row">
+          <span class="meta-label">Popular frontends</span>
+          <span class="meta-val">Custom SPA (React/Vue), limited headless examples</span>
+        </div>
+        <div class="meta-row">
+          <span class="meta-label">SDKs / helpers</span>
+          <span class="meta-val">No official JS SDK. Custom fetch to Laravel API routes.</span>
+        </div>
+        <div class="meta-row">
+          <span class="meta-label">Auth for API</span>
+          <span class="meta-val">Laravel Sanctum / Passport, custom middleware</span>
+        </div>
+        <div class="meta-row">
+          <span class="meta-label">Headless maturity</span>
+          <span class="meta-val">Not API-first. Headless requires custom development. Primary mode is server-rendered.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- JOOMLA -->
+    <div class="headless-card" style="--card-color: var(--joomla)">
+      <div class="headless-card-header">
+        <h3>Joomla</h3>
+        <span class="headless-verdict headless-partial">Basic headless</span>
+      </div>
+      <p class="headless-desc">Joomla 4+ introduced a Web Services API exposing core content (articles, categories, contacts, banners) via REST. It's functional but less mature than Drupal/WordPress headless ecosystems.</p>
+      <div class="headless-apis">
+        <div class="api-item api-core">
+          <span class="api-label">REST API</span>
+          <span class="api-status">Core</span>
+          <span class="api-detail">Web Services API. JSON output for articles, categories, contacts, users, media, banners. Token/Bearer auth.</span>
+        </div>
+        <div class="api-item api-plugin">
+          <span class="api-label">GraphQL</span>
+          <span class="api-status">Extension</span>
+          <span class="api-detail">Community extensions exist but not widely adopted. Most projects use REST.</span>
+        </div>
+      </div>
+      <div class="headless-meta">
+        <div class="meta-row">
+          <span class="meta-label">Hybrid mode</span>
+          <span class="meta-val">Possible &mdash; API available alongside template-rendered pages, but not a primary use case</span>
+        </div>
+        <div class="meta-row">
+          <span class="meta-label">Popular frontends</span>
+          <span class="meta-val">Custom SPA (React/Vue), Nuxt, limited Next.js examples</span>
+        </div>
+        <div class="meta-row">
+          <span class="meta-label">SDKs / helpers</span>
+          <span class="meta-val">No official JS SDK. Community wrappers, direct fetch to /api/index.php/v1/</span>
+        </div>
+        <div class="meta-row">
+          <span class="meta-label">Auth for API</span>
+          <span class="meta-val">API Token (core), Bearer authentication, session-based</span>
+        </div>
+        <div class="meta-row">
+          <span class="meta-label">Headless maturity</span>
+          <span class="meta-val">API since Joomla 4 (2021). Functional but ecosystem/docs for headless use are limited.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SULU -->
+    <div class="headless-card" style="--card-color: var(--sulu)">
+      <div class="headless-card-header">
+        <h3>Sulu CMS</h3>
+        <span class="headless-verdict headless-good">Good headless</span>
+      </div>
+      <p class="headless-desc">Sulu CMS is built on Symfony and offers both traditional server-rendered output via Twig and a headless mode via SuluHeadlessBundle, delivering content as JSON. REST API is core, with GraphQL available via bundles.</p>
+      <div class="headless-apis">
+        <div class="api-item api-core">
+          <span class="api-label">REST API</span>
+          <span class="api-status">Core</span>
+          <span class="api-detail">Full REST API for pages, articles, snippets, media, navigation, and search. JSON output with filtering and pagination.</span>
+        </div>
+        <div class="api-item api-contrib">
+          <span class="api-label">Headless JSON</span>
+          <span class="api-status">Bundle</span>
+          <span class="api-detail">SuluHeadlessBundle converts page rendering to JSON, enabling decoupled frontends.</span>
+        </div>
+        <div class="api-item api-contrib">
+          <span class="api-label">GraphQL</span>
+          <span class="api-status">Custom</span>
+          <span class="api-detail">Custom GraphQL endpoints possible via Symfony bundles (webonyx/graphql-php).</span>
+        </div>
+      </div>
+      <div class="headless-meta">
+        <div class="meta-row">
+          <span class="meta-label">Hybrid mode</span>
+          <span class="meta-val">Yes &mdash; Twig server-side templates + REST API for JS components or external consumers</span>
+        </div>
+        <div class="meta-row">
+          <span class="meta-label">Popular frontends</span>
+          <span class="meta-val">Next.js, Nuxt, React SPA, Vue SPA, custom Symfony frontend</span>
+        </div>
+        <div class="meta-row">
+          <span class="meta-label">SDKs / helpers</span>
+          <span class="meta-val">SuluHeadlessBundle, custom fetch wrappers, Symfony-based integrations</span>
+        </div>
+        <div class="meta-row">
+          <span class="meta-label">Auth for API</span>
+          <span class="meta-val">Token-based auth, session-based, Symfony Security component</span>
+        </div>
+        <div class="meta-row">
+          <span class="meta-label">Headless maturity</span>
+          <span class="meta-val">HeadlessBundle since ~2020. Growing adoption, especially in DACH region. REST API mature.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- TYPO3 -->
+    <div class="headless-card" style="--card-color: var(--typo3)">
+      <div class="headless-card-header">
+        <h3>TYPO3</h3>
+        <span class="headless-verdict headless-partial">Extension-based headless</span>
+      </div>
+      <p class="headless-desc">TYPO3 was built as a traditional server-rendered CMS. Headless mode requires the official "headless" extension (EXT:headless) which converts page rendering to JSON output. Not API-first by design.</p>
+      <div class="headless-apis">
+        <div class="api-item api-contrib">
+          <span class="api-label">JSON API</span>
+          <span class="api-status">Extension</span>
+          <span class="api-detail">EXT:headless converts TypoScript rendering to JSON. Page-based output, content elements as JSON. Official TYPO3 extension.</span>
+        </div>
+        <div class="api-item api-contrib">
+          <span class="api-label">GraphQL</span>
+          <span class="api-status">Extension</span>
+          <span class="api-detail">Community extensions available. Less mature than REST/JSON approach.</span>
+        </div>
+        <div class="api-item api-core">
+          <span class="api-label">REST (custom)</span>
+          <span class="api-status">Possible</span>
+          <span class="api-detail">Custom Extbase controllers can expose any data as JSON. Manual but flexible.</span>
+        </div>
+      </div>
+      <div class="headless-meta">
+        <div class="meta-row">
+          <span class="meta-label">Hybrid mode</span>
+          <span class="meta-val">Yes &mdash; EXT:headless can run alongside traditional Fluid templates per page type</span>
+        </div>
+        <div class="meta-row">
+          <span class="meta-label">Popular frontends</span>
+          <span class="meta-val">Next.js (official integration via EXT:headless), Nuxt, custom SPA</span>
+        </div>
+        <div class="meta-row">
+          <span class="meta-label">SDKs / helpers</span>
+          <span class="meta-val">nuxt-typo3 (Nuxt module), t3headless/nuxt-typo3, custom fetch wrappers</span>
+        </div>
+        <div class="meta-row">
+          <span class="meta-label">Auth for API</span>
+          <span class="meta-val">Frontend user sessions, custom token-based auth via middleware</span>
+        </div>
+        <div class="meta-row">
+          <span class="meta-label">Headless maturity</span>
+          <span class="meta-val">Extension available since ~2020. Growing adoption but still secondary to traditional mode.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- WAGTAIL -->
+    <div class="headless-card" style="--card-color: var(--wagtail)">
+      <div class="headless-card-header">
+        <h3>Wagtail</h3>
+        <span class="headless-verdict headless-good">Good headless</span>
+      </div>
+      <p class="headless-desc">Wagtail ships with a built-in REST API (Wagtail API v2) exposing pages, images, and documents as JSON. It supports full headless mode where Django serves only as an API backend. GraphQL is available via the wagtail-grapple package.</p>
+      <div class="headless-apis">
+        <div class="api-item api-core">
+          <span class="api-label">REST API</span>
+          <span class="api-status">Core</span>
+          <span class="api-detail">Wagtail API v2. Pages, images, documents as JSON endpoints. Filtering, ordering, pagination, nested fields.</span>
+        </div>
+        <div class="api-item api-contrib">
+          <span class="api-label">GraphQL</span>
+          <span class="api-status">Plugin</span>
+          <span class="api-detail">wagtail-grapple — auto-generated GraphQL schema from page models and StreamField blocks.</span>
+        </div>
+      </div>
+      <div class="headless-meta">
+        <div class="meta-row">
+          <span class="meta-label">Hybrid mode</span>
+          <span class="meta-val">Yes &mdash; Django templates for server-rendered pages + REST API for JS components or external consumers</span>
+        </div>
+        <div class="meta-row">
+          <span class="meta-label">Popular frontends</span>
+          <span class="meta-val">Next.js, Nuxt, Gatsby, React SPA, Vue SPA, Astro</span>
+        </div>
+        <div class="meta-row">
+          <span class="meta-label">SDKs / helpers</span>
+          <span class="meta-val">wagtail-grapple (GraphQL), custom fetch to /api/v2/, gatsby-source-wagtail</span>
+        </div>
+        <div class="meta-row">
+          <span class="meta-label">Auth for API</span>
+          <span class="meta-val">Django session auth, token auth (DRF), OAuth via django-oauth-toolkit</span>
+        </div>
+        <div class="meta-row">
+          <span class="meta-label">Headless maturity</span>
+          <span class="meta-val">REST API since Wagtail 2.0 (2018). Mature, production-proven. Used by NASA, Google, NHS.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- WORDPRESS -->
+    <div class="headless-card" style="--card-color: var(--wordpress)">
+      <div class="headless-card-header">
+        <h3>WordPress</h3>
+        <span class="headless-verdict headless-good">Good headless</span>
+      </div>
+      <p class="headless-desc">WordPress ships with a REST API since v4.7. The Gutenberg editor itself is a React SPA consuming this API. Headless WordPress is a well-established pattern with dedicated hosting (WP Engine Atlas, etc.).</p>
+      <div class="headless-apis">
+        <div class="api-item api-core">
+          <span class="api-label">REST API</span>
+          <span class="api-status">Core</span>
+          <span class="api-detail">Full CRUD for posts, pages, media, taxonomies, users. /wp-json/wp/v2/ endpoints. Discovery via link headers.</span>
+        </div>
+        <div class="api-item api-plugin">
+          <span class="api-label">GraphQL</span>
+          <span class="api-status">Plugin</span>
+          <span class="api-detail">WPGraphQL plugin. Mature, 10k+ installs. Full schema with custom post types, ACF, Yoast integration.</span>
+        </div>
+      </div>
+      <div class="headless-meta">
+        <div class="meta-row">
+          <span class="meta-label">Hybrid mode</span>
+          <span class="meta-val">Limited &mdash; PHP themes are separate from API. Either fully themed or fully headless, rarely both.</span>
+        </div>
+        <div class="meta-row">
+          <span class="meta-label">Popular frontends</span>
+          <span class="meta-val">Next.js (Faust.js), Gatsby, Astro, Nuxt, React/Vue SPA</span>
+        </div>
+        <div class="meta-row">
+          <span class="meta-label">SDKs / helpers</span>
+          <span class="meta-val">Faust.js (WP Engine), @wordpress/api-fetch, wpapi (npm), WPGraphQL for ACF</span>
+        </div>
+        <div class="meta-row">
+          <span class="meta-label">Auth for API</span>
+          <span class="meta-val">Application Passwords (core), JWT (plugin), OAuth (plugin), cookie nonce</span>
+        </div>
+        <div class="meta-row">
+          <span class="meta-label">Headless maturity</span>
+          <span class="meta-val">REST API since 2016, but preview/admin UX designed for traditional use. Dedicated headless hosting exists.</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="method-note" style="margin-top: 1.5rem;">
+    <div class="note-icon">!</div>
+    <div>
+      <strong>Note:</strong> The 5 headless CMS platforms (Directus, Ghost, KeystoneJS, Payload, Strapi) are <em>API-only by design</em> &mdash; they don't have a traditional server-rendered frontend. The comparison above focuses on the 8 full-stack CMS platforms and their ability to also work in headless/hybrid mode.
+    </div>
+  </div>
+</section>

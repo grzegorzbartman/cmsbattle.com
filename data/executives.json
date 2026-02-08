@@ -1,0 +1,262 @@
+[
+  {
+    "name": "Craft CMS 5",
+    "color": "var(--craft)",
+    "strengths": [
+      "Exceptional content modeling — Matrix fields with nested entries, 23+ field types",
+      "Project Config — full config-as-YAML, git-friendly, environment sync",
+      "Built-in GraphQL API with GraphiQL IDE for headless mode",
+      "Core 2FA + Passkeys, account lockout, elevated sessions",
+      "Beautiful admin UI, live preview, Plugin Store with 1,000+ plugins"
+    ],
+    "weaknesses": [
+      "Commercial license — free Solo tier limited to 1 user",
+      "PHP/Yii — no TypeScript, smaller ecosystem than WordPress/Drupal",
+      "No native ETL/migration framework (Feed Me plugin only)",
+      "No advanced multi-step editorial workflows in core",
+      "No AI or personalization features built-in"
+    ],
+    "bestFor": "Design agencies, content-rich websites, digital experiences where content modeling and developer experience are paramount. Projects needing clean config management.",
+    "avoidIf": "You need a free open-source license for teams, enterprise workflows, large-scale migration tools, or JS/TS stack."
+  },
+  {
+    "name": "Directus 11",
+    "color": "var(--directus)",
+    "strengths": [
+      "Database-first — wrapper for any SQL database",
+      "Policy-based access control (v11) — very granular",
+      "REST + GraphQL + WebSockets (real-time)",
+      "Flows — visual automation builder",
+      "Full white-label branding, 30+ admin languages"
+    ],
+    "weaknesses": [
+      "Schema in DB, not in code — difficult config management",
+      "No faceted search, ETL, or migration framework",
+      "Content versioning — still maturing (breaking changes in v11)",
+      "Custom logic requires extensions (less flexible than hooks)",
+      "No routing/URL management (pure headless)"
+    ],
+    "bestFor": "Database-first projects, internal dashboards, data management tools. Teams wanting GUI-first approach with SQL database.",
+    "avoidIf": "You need git-based config management, complex content workflows, or full-stack rendering."
+  },
+  {
+    "name": "Drupal 11",
+    "color": "var(--drupal)",
+    "strengths": [
+      "Most powerful content modeling system (entity/bundle/fields)",
+      "Views — visual query builder, no code required",
+      "Mature workflows: Content Moderation, Workspaces",
+      "Migrate API — enterprise-grade ETL",
+      "25 years of ecosystem, 50k+ modules"
+    ],
+    "weaknesses": [
+      "PHP — no TypeScript, harder JS stack integration",
+      "Steep learning curve for developers",
+      "Frontend (Twig) outdated vs React/Vue",
+      "Slower initial development (boilerplate)",
+      "More demanding hosting requirements"
+    ],
+    "bestFor": "Enterprise portals, governments, universities, large multilingual sites with advanced workflows and data migrations.",
+    "avoidIf": "You have a small JS team, building SPA/mobile-first, or need a quick MVP."
+  },
+  {
+    "name": "Ghost 6",
+    "color": "var(--ghost)",
+    "strengths": [
+      "Best-in-class for publishing — clean, focused editor",
+      "Built-in membership, subscriptions, newsletter delivery",
+      "Content API + Admin API — clean headless architecture",
+      "Native analytics, SEO, and social features",
+      "Beautiful default themes, fast out of the box"
+    ],
+    "weaknesses": [
+      "NO multilingual support whatsoever",
+      "NO content versioning or revision history",
+      "Very limited content modeling — posts and pages only",
+      "No custom fields, no taxonomies beyond tags",
+      "No workflow system (draft/publish only)"
+    ],
+    "bestFor": "Professional bloggers, newsletter businesses, content creators, media publications focused on writing and membership monetization.",
+    "avoidIf": "You need structured content modeling, multilingual, versioning, custom fields, or complex editorial workflows."
+  },
+  {
+    "name": "Joomla 6",
+    "color": "var(--joomla)",
+    "strengths": [
+      "Powerful ACL — most granular permission system in traditional CMS",
+      "Native multilingual with 70+ language packs",
+      "Full revision history with custom field versioning",
+      "Built-in publishing workflows with scheduling",
+      "Smart Search with finder plugin architecture"
+    ],
+    "weaknesses": [
+      "Smaller plugin ecosystem than WordPress",
+      "Admin UI less intuitive than competitors",
+      "Config management weak — schema in database",
+      "Headless API support still maturing",
+      "No TypeScript — PHP-only backend"
+    ],
+    "bestFor": "Multilingual community portals, association websites, e-government, projects needing fine-grained ACL without enterprise fees.",
+    "avoidIf": "You need headless-first architecture, JS/TS stack, or the largest possible plugin ecosystem."
+  },
+  {
+    "name": "KeystoneJS 6",
+    "color": "var(--keystone)",
+    "strengths": [
+      "Elegant schema API — clean TypeScript",
+      "Granular access control (operation + filter + field)",
+      "Document field — rich text with embedded React components",
+      "Prisma ORM — solid data layer",
+      "Lightweight, minimalist"
+    ],
+    "weaknesses": [
+      "NO i18n — multilingual does not exist in core (issue #322 since 2018!)",
+      "NO revision/versioning system",
+      "Small ecosystem — no marketplace, few plugins",
+      "GraphQL only — no REST API",
+      "Slow development — no releases since May 2025"
+    ],
+    "bestFor": "Small-medium English-only projects with simple data models. Developers who love GraphQL and Prisma.",
+    "avoidIf": "You need multilingual, versioning, REST API, or a rich plugin ecosystem."
+  },
+  {
+    "name": "October CMS 4",
+    "color": "var(--october)",
+    "strengths": [
+      "Built on Laravel — clean architecture, Eloquent ORM, Artisan CLI, Composer ecosystem",
+      "Tailor content modeling — YAML blueprints for custom types without code",
+      "Excellent admin UI — dark mode, white-label branding, drag-and-drop dashboard widgets",
+      "Plugin Marketplace with 1,000+ plugins for extensibility",
+      "Strong forms system — YAML blueprints with triggers, conditions, repeaters (enhanced v3.6)"
+    ],
+    "weaknesses": [
+      "Multilingual requires plugin (RainLab.Translate) — no core i18n",
+      "No content versioning or revision history in core",
+      "No AI features — no content generation, image, or translation capabilities",
+      "Limited API — no auto-generated REST or GraphQL, custom routes only",
+      "Commercial license — not standard open source (custom EULA since v2)"
+    ],
+    "bestFor": "Laravel developers building content-rich websites, agencies wanting clean admin UX with plugin extensibility, projects needing rapid development on a familiar PHP framework.",
+    "avoidIf": "You need multilingual, content versioning, AI features, or a headless-first API architecture without custom development."
+  },
+  {
+    "name": "Payload CMS",
+    "color": "var(--payload)",
+    "strengths": [
+      "TypeScript-first, code-as-config — full control",
+      "Native Next.js integration (same repo)",
+      "Granular access control at field/collection level (core)",
+      "Versioning, autosave, scheduled publishing in core",
+      "Lexical rich text editor — extensible"
+    ],
+    "weaknesses": [
+      "Young project — plugin ecosystem still growing",
+      "Documentation still evolving",
+      "Requires dev-first approach (no GUI schema builder)",
+      "No native search, facets, or ETL",
+      "API stability — rapid development = frequent changes"
+    ],
+    "bestFor": "Next.js developers wanting CMS + app framework in one repo. Projects where code control > GUI.",
+    "avoidIf": "You need a GUI content modeler for non-technical users, or migrating from legacy CMS."
+  },
+  {
+    "name": "Strapi v5",
+    "color": "var(--strapi)",
+    "strengths": [
+      "Easiest start — GUI content type builder",
+      "Active community, plugin Marketplace",
+      "Draft & Publish + i18n in core",
+      "REST + GraphQL out of the box",
+      "Strapi Cloud — managed hosting"
+    ],
+    "weaknesses": [
+      "Review Workflows — Enterprise only (paid)",
+      "No native version history in Community",
+      "Limited search (no faceted, no abstraction)",
+      "Stability — v5 still maturing (70+ bugfixes in recent releases)",
+      "No scheduled publishing in core"
+    ],
+    "bestFor": "Startups, agencies, content hubs serving multiple frontends (web + mobile). Quick start for JS teams.",
+    "avoidIf": "You need advanced workflows without Enterprise fees, or complex content migration."
+  },
+  {
+    "name": "Sulu CMS 3",
+    "color": "var(--sulu)",
+    "strengths": [
+      "Built on Symfony — full-stack framework with enterprise-grade architecture",
+      "Best-in-class multilingual + multisite (unlimited localizations per webspace)",
+      "Sulu.ai — multi-provider AI for content, translation, metadata (OpenAI, Anthropic, DeepL)",
+      "Excellent SEO — core meta tags, sitemaps, canonical, hreflang, robots directives",
+      "Core content versioning, live preview, media library with focal point & crops"
+    ],
+    "weaknesses": [
+      "Small community — niche adoption outside DACH/European market",
+      "No ETL/migration framework — custom Symfony commands required",
+      "No 2FA, limited security features beyond Symfony defaults",
+      "Steep learning curve — requires Symfony expertise",
+      "Small plugin/bundle ecosystem compared to WordPress, Drupal, or even Craft"
+    ],
+    "bestFor": "Symfony developers building enterprise multilingual/multisite projects. Agencies in the DACH region needing content-rich, customizable websites with strong SEO and AI capabilities.",
+    "avoidIf": "You need a JS/TS stack, large plugin ecosystem, quick MVP setup, or a platform with widespread community support."
+  },
+  {
+    "name": "TYPO3 14",
+    "color": "var(--typo3)",
+    "strengths": [
+      "Enterprise-grade content management — comparable to Drupal",
+      "Best-in-class multilingual (56+ languages, per-field translation)",
+      "Workspaces — full editorial workflow with staging",
+      "Complete revision history with visual diff and rollback",
+      "Granular caching framework with cache tags"
+    ],
+    "weaknesses": [
+      "Very steep learning curve — TCA configuration is complex",
+      "Smaller community than WordPress/Drupal (mainly DACH region)",
+      "Headless API requires extension (not core-first)",
+      "No TypeScript — PHP-only backend",
+      "Slower initial setup compared to headless CMS"
+    ],
+    "bestFor": "Enterprise portals in DACH region, large multilingual/multisite setups, organizations needing strict editorial workflows and governance.",
+    "avoidIf": "You have a small team, need JS/TS stack, want headless-first, or need quick MVP."
+  },
+  {
+    "name": "Wagtail 7",
+    "color": "var(--wagtail)",
+    "strengths": [
+      "StreamField — flexible, nestable content blocks with real-time preview",
+      "Built-in workflows — multi-step approval chains with custom tasks (since v2.10)",
+      "Excellent accessibility — dedicated a11y team, ATAG compliance, alt text enforcement",
+      "Full revision history with visual diff comparison and revert",
+      "Core multisite + i18n + REST API + search backends — versatile out of the box"
+    ],
+    "weaknesses": [
+      "Python/Django — no TypeScript, smaller ecosystem than WordPress/Drupal",
+      "No field-level permissions in core",
+      "Limited AI capabilities — only basic wagtail-ai package",
+      "No native visual page builder or inline editing (StreamField ≠ drag-and-drop)",
+      "No native GraphQL — requires wagtail-grapple plugin"
+    ],
+    "bestFor": "Python/Django teams building content-rich websites with structured editorial workflows, accessibility requirements, and multi-site needs. Strong fit for government, education, and non-profit sectors.",
+    "avoidIf": "You need a JS/TS stack, visual drag-and-drop page building, field-level permissions, or a massive plugin marketplace."
+  },
+  {
+    "name": "WordPress 6.9",
+    "color": "var(--wordpress)",
+    "strengths": [
+      "Largest ecosystem — 60k+ plugins, themes for everything",
+      "Easiest onboarding — everyone knows WordPress",
+      "Gutenberg block editor — powerful visual editing",
+      "Native revisions, scheduled publishing, media library",
+      "WP-CLI and massive community support"
+    ],
+    "weaknesses": [
+      "Multilingual requires plugins (WPML/Polylang — paid)",
+      "Security surface area — plugin quality varies wildly",
+      "Config management weak — schema lives in DB",
+      "Not truly headless by default (requires WPGraphQL plugin)",
+      "Performance at scale needs heavy caching/optimization"
+    ],
+    "bestFor": "Blogs, agency sites, small-medium businesses, content-heavy sites, anyone needing a quick setup with massive plugin ecosystem.",
+    "avoidIf": "You need enterprise-grade workflows, strict config management, or a headless-first architecture."
+  }
+]

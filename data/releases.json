@@ -1,0 +1,115 @@
+{
+  "_meta": {
+    "last_checked": "2026-02-07",
+    "checked_by": "AI/manual"
+  },
+  "craft": {
+    "name": "Craft CMS",
+    "latest_version": "5.9.0",
+    "release_date": "2026-01-27",
+    "release_url": "https://github.com/craftcms/cms/releases/tag/5.9.0",
+    "releases_page": "https://github.com/craftcms/cms/releases",
+    "github": "https://github.com/craftcms/cms",
+    "next_major": "Craft 6 alpha expected Q1 2026"
+  },
+  "drupal": {
+    "name": "Drupal",
+    "latest_version": "11.3.2",
+    "release_date": "2026-01-08",
+    "release_url": "https://www.drupal.org/project/drupal/releases/11.3.2",
+    "releases_page": "https://www.drupal.org/project/drupal/releases",
+    "github": "https://github.com/drupal/drupal",
+    "next_major": "Drupal 12 expected mid-late 2026"
+  },
+  "wordpress": {
+    "name": "WordPress",
+    "latest_version": "6.9.1",
+    "release_date": "2026-02-03",
+    "release_url": "https://wordpress.org/news/category/releases/",
+    "releases_page": "https://wordpress.org/download/releases/",
+    "github": "https://github.com/WordPress/WordPress",
+    "next_major": "WordPress 7.0 expected April 2026"
+  },
+  "wagtail": {
+    "name": "Wagtail",
+    "latest_version": "7.3",
+    "release_date": "2026-02-03",
+    "release_url": "https://github.com/wagtail/wagtail/releases/tag/v7.3",
+    "releases_page": "https://github.com/wagtail/wagtail/releases",
+    "github": "https://github.com/wagtail/wagtail"
+  },
+  "typo3": {
+    "name": "TYPO3",
+    "latest_version": "14.0.2",
+    "release_date": "2026-01-13",
+    "release_url": "https://typo3.org/cms/release-news",
+    "releases_page": "https://typo3.org/cms/release-news",
+    "github": "https://github.com/TYPO3/typo3",
+    "next_major": "TYPO3 14.3 LTS expected April 2026"
+  },
+  "strapi": {
+    "name": "Strapi",
+    "latest_version": "5.33.4",
+    "release_date": "2026-01-21",
+    "release_url": "https://github.com/strapi/strapi/releases/tag/v5.33.4",
+    "releases_page": "https://github.com/strapi/strapi/releases",
+    "github": "https://github.com/strapi/strapi"
+  },
+  "sulu": {
+    "name": "Sulu CMS",
+    "latest_version": "3.0.3",
+    "release_date": "2026-01-16",
+    "release_url": "https://github.com/sulu/sulu/releases/tag/3.0.3",
+    "releases_page": "https://github.com/sulu/sulu/releases",
+    "github": "https://github.com/sulu/sulu"
+  },
+  "payload": {
+    "name": "Payload CMS",
+    "latest_version": "3.75.0",
+    "release_date": "2026-02-05",
+    "release_url": "https://github.com/payloadcms/payload/releases/tag/v3.75.0",
+    "releases_page": "https://github.com/payloadcms/payload/releases",
+    "github": "https://github.com/payloadcms/payload"
+  },
+  "ghost": {
+    "name": "Ghost",
+    "latest_version": "6.17.0",
+    "release_date": "2026-02-06",
+    "release_url": "https://github.com/TryGhost/Ghost/releases",
+    "releases_page": "https://github.com/TryGhost/Ghost/releases",
+    "github": "https://github.com/TryGhost/Ghost"
+  },
+  "joomla": {
+    "name": "Joomla",
+    "latest_version": "6.0.2",
+    "release_date": "2026-01-06",
+    "release_url": "https://downloads.joomla.org/",
+    "releases_page": "https://downloads.joomla.org/",
+    "github": "https://github.com/joomla/joomla-cms"
+  },
+  "keystone": {
+    "name": "KeystoneJS",
+    "latest_version": "6.5.1",
+    "release_date": "2025-05-06",
+    "release_url": "https://github.com/keystonejs/keystone/releases/tag/2025-05-06",
+    "releases_page": "https://github.com/keystonejs/keystone/releases",
+    "github": "https://github.com/keystonejs/keystone",
+    "note": "No releases since May 2025 — slow development pace"
+  },
+  "october": {
+    "name": "October CMS",
+    "latest_version": "4.1.9",
+    "release_date": "2026-01-27",
+    "release_url": "https://github.com/octobercms/october/releases/tag/v4.1.9",
+    "releases_page": "https://github.com/octobercms/october/releases",
+    "github": "https://github.com/octobercms/october"
+  },
+  "directus": {
+    "name": "Directus",
+    "latest_version": "11.15.0",
+    "release_date": "2026-02-05",
+    "release_url": "https://github.com/directus/directus/releases/tag/v11.15.0",
+    "releases_page": "https://github.com/directus/directus/releases",
+    "github": "https://github.com/directus/directus"
+  }
+}

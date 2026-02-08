@@ -1,0 +1,27 @@
+<section id="comparison" class="table-section" x-data="categoryBrowser">
+  <div class="section-header">
+    <div class="section-tag">03 &mdash; detailed comparison</div>
+    <h2>Feature by feature</h2>
+    <p class="section-desc">Click a category to expand the comparison table. Hover over an icon to see details.</p>
+  </div>
+
+  <div class="legend">
+    <div class="legend-item"><span class="status status-full">&#10003;</span> Full core support</div>
+    <div class="legend-item"><span class="status status-partial">&#9680;</span> Partial / config required</div>
+    <div class="legend-item"><span class="status status-none">&#10007;</span> None</div>
+    <div class="legend-item"><span class="status status-plugin">&#8853;</span> Requires plugin/module</div>
+  </div>
+
+  <div id="categories-container">
+    <template x-for="(cat, i) in categories" :key="i">
+      <div class="category-block" :class="{ 'open': isOpen(i) }">
+        <div class="category-header" @click="toggle(i)">
+          <h3><span class="cat-icon" x-text="cat.icon"></span> <span x-text="cat.name"></span></h3>
+          <span class="toggle-arrow">&#9660;</span>
+        </div>
+        <div class="category-body" x-html="renderTable(cat)">
+        </div>
+      </div>
+    </template>
+  </div>
+</section>

@@ -1,0 +1,31 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import Nav from '../components/Nav.astro';
+import Overview from '../components/Overview.astro';
+import Metrics from '../components/Metrics.astro';
+import Headless from '../components/Headless.astro';
+import Comparison from '../components/Comparison.astro';
+import Wizard from '../components/Wizard.astro';
+import Executive from '../components/Executive.astro';
+import Confidence from '../components/Confidence.astro';
+import Footer from '../components/Footer.astro';
+
+import categories from '../../data/categories.json';
+import executives from '../../data/executives.json';
+import releases from '../../data/releases.json';
+import metrics from '../../data/metrics.json';
+---
+
+<Layout categories={categories} executives={executives}>
+  <Hero />
+  <Nav />
+  <Overview releases={releases} />
+  <Metrics releases={releases} metrics={metrics} />
+  <Headless />
+  <Comparison />
+  <Wizard />
+  <Executive />
+  <Confidence />
+  <Footer />
+</Layout>
