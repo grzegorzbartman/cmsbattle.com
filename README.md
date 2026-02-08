@@ -160,4 +160,6 @@ You are free to use, modify, and distribute this project under the terms of the 
 
 ---
 
-Built by Grzegorz Bartman
+Built by [Grzegorz Bartman](https://github.com/grzegorzbartman) | [GitHub Repository](https://github.com/grzegorzbartman/cmsbattle.com)
+
+Want to add a new CMS, improve data, or suggest other changes? Fork the repo and [submit a Pull Request](https://github.com/grzegorzbartman/cmsbattle.com/pulls).
