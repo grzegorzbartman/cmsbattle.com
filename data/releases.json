@@ -30,6 +30,15 @@
     "github": "https://github.com/WordPress/WordPress",
     "next_major": "WordPress 7.0 expected April 2026"
   },
+  "umbraco": {
+    "name": "Umbraco",
+    "latest_version": "17.0.2",
+    "release_date": "2025-12-11",
+    "release_url": "https://github.com/umbraco/Umbraco-CMS/releases/tag/release-17.0.2",
+    "releases_page": "https://github.com/umbraco/Umbraco-CMS/releases",
+    "github": "https://github.com/umbraco/Umbraco-CMS",
+    "next_major": "Umbraco 18 (STS) expected June 2026"
+  },
   "wagtail": {
     "name": "Wagtail",
     "latest_version": "7.3",

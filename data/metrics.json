@@ -164,6 +164,20 @@
     "sites": "~5k",
     "sites_note": "estimated active Sulu installations"
   },
+  "umbraco": {
+    "github_stars": "4.5k",
+    "github_stars_note": "Main repo on GitHub",
+    "contributors": "500+",
+    "contributors_note": "GitHub contributors across umbraco org",
+    "extensions": "2,000+",
+    "extensions_label": "packages (Marketplace)",
+    "first_release": "2004",
+    "age_years": 22,
+    "market_share": "0.1%",
+    "market_share_note": "of all CMS-powered sites (W3Techs)",
+    "sites": "~750k",
+    "sites_note": "estimated active Umbraco sites"
+  },
   "directus": {
     "github_stars": "34k",
     "github_stars_note": "BSL license (was GPL)",

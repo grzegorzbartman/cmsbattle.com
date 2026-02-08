@@ -30,7 +30,9 @@
         "oc": "full",
         "oct": "Tailor blueprints + plugin models for custom types",
         "wa": "full",
-        "wat": "Page types, StreamField blocks, Snippets, custom Django models"
+        "wat": "Page types, StreamField blocks, Snippets, custom Django models",
+        "um": "full",
+        "umt": "Document Types with properties, tabs, compositions"
       },
       {
         "name": "Field types & customization",
@@ -59,7 +61,9 @@
         "oc": "full",
         "oct": "15+ field types via YAML blueprints (text, repeater, file, etc.)",
         "wa": "full",
-        "wat": "StreamField 15+ block types, custom Django model fields"
+        "wat": "StreamField 15+ block types, custom Django model fields",
+        "um": "full",
+        "umt": "25+ property editors (text, RTE, media picker, content picker, etc.)"
       },
       {
         "name": "Multi-value (repeating) fields",
@@ -87,7 +91,9 @@
         "oc": "full",
         "oct": "Core Repeater + Tabbed Repeater (v3.2+)",
         "wa": "full",
-        "wat": "StreamField — repeatable, nestable content blocks"
+        "wat": "StreamField — repeatable, nestable content blocks",
+        "um": "full",
+        "umt": "Block List Editor, Block Grid Editor for repeatable content"
       },
       {
         "name": "Field inheritance / reuse",
@@ -115,7 +121,9 @@
         "oc": "partial",
         "oct": "Blueprint mixins, partial reuse across models",
         "wa": "partial",
-        "wat": "Django model inheritance, abstract pages, mixin classes"
+        "wat": "Django model inheritance, abstract pages, mixin classes",
+        "um": "full",
+        "umt": "Compositions — share property groups across Document Types"
       },
       {
         "name": "Computed fields",
@@ -143,7 +151,9 @@
         "oc": "partial",
         "oct": "Laravel model accessors/mutators",
         "wa": "partial",
-        "wat": "Django model properties, template tags"
+        "wat": "Django model properties, template tags",
+        "um": "partial",
+        "umt": "Via custom C# code, property value converters"
       },
       {
         "name": "Display modes (view modes)",
@@ -172,7 +182,9 @@
         "oc": "full",
         "oct": "Twig partials/layouts per content type",
         "wa": "full",
-        "wat": "Django templates per page type"
+        "wat": "Django templates per page type",
+        "um": "full",
+        "umt": "Razor templates per Document Type"
       }
     ]
   },
@@ -206,7 +218,9 @@
         "oc": "none",
         "oct": "None — code-based Eloquent queries",
         "wa": "none",
-        "wat": "None — code-based Django ORM queries"
+        "wat": "None — code-based Django ORM queries",
+        "um": "none",
+        "umt": "None — code-based IPublishedContent queries"
       },
       {
         "name": "API query / filtering",
@@ -235,7 +249,9 @@
         "oc": "partial",
         "oct": "Custom Laravel REST routes",
         "wa": "full",
-        "wat": "Wagtail API v2 (REST) with filters, ordering, pagination"
+        "wat": "Wagtail API v2 (REST) with filters, ordering, pagination",
+        "um": "full",
+        "umt": "Content Delivery API (REST) with filtering, sorting (v12+)"
       },
       {
         "name": "Aggregation (COUNT/SUM/AVG)",
@@ -263,7 +279,9 @@
         "oc": "partial",
         "oct": "Laravel Eloquent aggregation methods",
         "wa": "partial",
-        "wat": "Django ORM aggregation"
+        "wat": "Django ORM aggregation",
+        "um": "partial",
+        "umt": "Custom LINQ queries"
       },
       {
         "name": "Relationship traversal",
@@ -284,7 +302,9 @@
         "oc": "full",
         "oct": "Eloquent ORM relationships (hasMany, belongsTo, etc.)",
         "wa": "full",
-        "wat": "Django ORM relationships, related pages"
+        "wat": "Django ORM relationships, related pages",
+        "um": "full",
+        "umt": "Content Picker, ancestor/descendant traversal"
       },
       {
         "name": "Bulk operations",
@@ -313,7 +333,9 @@
         "oc": "partial",
         "oct": "Limited bulk actions in admin lists",
         "wa": "partial",
-        "wat": "Limited bulk actions in admin"
+        "wat": "Limited bulk actions in admin",
+        "um": "partial",
+        "umt": "Limited backoffice bulk actions"
       }
     ]
   },
@@ -343,7 +365,9 @@
         "oc": "full",
         "oct": "Core backend users, roles, permissions",
         "wa": "full",
-        "wat": "Django groups + Wagtail page permissions"
+        "wat": "Django groups + Wagtail page permissions",
+        "um": "full",
+        "umt": "User groups with section, node, Document Type permissions"
       },
       {
         "name": "Field-level permissions",
@@ -371,7 +395,9 @@
         "oc": "none",
         "oct": "None — no field-level ACL in core",
         "wa": "none",
-        "wat": "No field-level ACL in core"
+        "wat": "No field-level ACL in core",
+        "um": "none",
+        "umt": "No field-level permissions in core"
       },
       {
         "name": "Content-level permissions",
@@ -400,7 +426,9 @@
         "oc": "partial",
         "oct": "Plugin/model-level permissions",
         "wa": "full",
-        "wat": "Page-level permissions per group (add/edit/publish/lock)"
+        "wat": "Page-level permissions per group (add/edit/publish/lock)",
+        "um": "full",
+        "umt": "Per-node start node permissions, granular access"
       },
       {
         "name": "Dynamic permissions (edit own)",
@@ -428,7 +456,9 @@
         "oc": "partial",
         "oct": "Custom via model events/policies",
         "wa": "partial",
-        "wat": "Page ownership, custom middleware"
+        "wat": "Page ownership, custom middleware",
+        "um": "partial",
+        "umt": "Custom via user groups and event handlers"
       },
       {
         "name": "API access control",
@@ -452,7 +482,9 @@
         "oc": "partial",
         "oct": "Custom Laravel middleware",
         "wa": "full",
-        "wat": "Django authentication + API token/session auth"
+        "wat": "Django authentication + API token/session auth",
+        "um": "full",
+        "umt": "API keys, OAuth 2.0 client credentials (Management API)"
       }
     ]
   },
@@ -487,7 +519,9 @@
         "oc": "full",
         "oct": "Core draft/publish states",
         "wa": "full",
-        "wat": "Core live + draft revisions"
+        "wat": "Core live + draft revisions",
+        "um": "full",
+        "umt": "Core Save & Publish workflow"
       },
       {
         "name": "Custom workflow states",
@@ -515,7 +549,9 @@
         "oc": "partial",
         "oct": "Custom via model events/behaviors",
         "wa": "full",
-        "wat": "Workflows module (since v2.10) — custom tasks, approval chains"
+        "wat": "Workflows module (since v2.10) — custom tasks, approval chains",
+        "um": "plugin",
+        "umt": "Umbraco Workflow package (official, commercial)"
       },
       {
         "name": "Scheduled publishing",
@@ -544,7 +580,9 @@
         "oc": "plugin",
         "oct": "Via plugins (not in core)",
         "wa": "full",
-        "wat": "Core go-live and expiry date per page"
+        "wat": "Core go-live and expiry date per page",
+        "um": "full",
+        "umt": "Core scheduled publish/unpublish dates"
       },
       {
         "name": "Editorial approval chain",
@@ -572,7 +610,9 @@
         "oc": "none",
         "oct": "None — no core workflow engine",
         "wa": "full",
-        "wat": "Workflows — multi-step approval tasks"
+        "wat": "Workflows — multi-step approval tasks",
+        "um": "plugin",
+        "umt": "Umbraco Workflow — multi-stage approval"
       }
     ]
   },
@@ -606,7 +646,9 @@
         "oc": "plugin",
         "oct": "Via plugins, not in core",
         "wa": "full",
-        "wat": "Core page revisions"
+        "wat": "Core page revisions",
+        "um": "full",
+        "umt": "Core version history per content node"
       },
       {
         "name": "Revision diff / comparison",
@@ -634,7 +676,9 @@
         "oc": "none",
         "oct": "None",
         "wa": "full",
-        "wat": "Core comparison view in admin"
+        "wat": "Core comparison view in admin",
+        "um": "partial",
+        "umt": "Version list, basic comparison"
       },
       {
         "name": "Revision revert",
@@ -662,7 +706,9 @@
         "oc": "plugin",
         "oct": "Via plugins",
         "wa": "full",
-        "wat": "Core revert to previous revision"
+        "wat": "Core revert to previous revision",
+        "um": "full",
+        "umt": "Core rollback to any previous version"
       },
       {
         "name": "Automatic vs manual revisions",
@@ -690,7 +736,9 @@
         "oc": "none",
         "oct": "None — no native versioning system",
         "wa": "full",
-        "wat": "Auto-saved drafts, manual publish creates revision"
+        "wat": "Auto-saved drafts, manual publish creates revision",
+        "um": "full",
+        "umt": "Auto-versioning on save/publish"
       }
     ]
   },
@@ -724,7 +772,9 @@
         "oc": "plugin",
         "oct": "RainLab.Translate plugin",
         "wa": "full",
-        "wat": "Core i18n (v2.11+) + wagtail-localize"
+        "wat": "Core i18n (v2.11+) + wagtail-localize",
+        "um": "full",
+        "umt": "Core language variants per property (since v8)"
       },
       {
         "name": "Admin UI translation",
@@ -752,7 +802,9 @@
         "oc": "partial",
         "oct": "YAML locale files, community translations",
         "wa": "full",
-        "wat": "Django i18n, 40+ admin languages"
+        "wat": "Django i18n, 40+ admin languages",
+        "um": "full",
+        "umt": "Backoffice available in 20+ languages"
       },
       {
         "name": "Language fallback",
@@ -780,7 +832,9 @@
         "oc": "plugin",
         "oct": "RainLab.Translate plugin",
         "wa": "partial",
-        "wat": "Via wagtail-localize settings"
+        "wat": "Via wagtail-localize settings",
+        "um": "full",
+        "umt": "Core language fallback configuration"
       },
       {
         "name": "Field-level translatability",
@@ -808,7 +862,9 @@
         "oc": "plugin",
         "oct": "RainLab.Translate per-field",
         "wa": "full",
-        "wat": "Per-field translatable via wagtail-localize"
+        "wat": "Per-field translatable via wagtail-localize",
+        "um": "full",
+        "umt": "Per-property Vary by Culture flag"
       },
       {
         "name": "Translation status overview",
@@ -836,7 +892,9 @@
         "oc": "none",
         "oct": "None",
         "wa": "partial",
-        "wat": "wagtail-localize dashboard"
+        "wat": "wagtail-localize dashboard",
+        "um": "partial",
+        "umt": "Content tree culture indicators, limited overview"
       }
     ]
   },
@@ -871,7 +929,9 @@
         "oc": "partial",
         "oct": "Relation fields, manual hierarchy via TreeModel",
         "wa": "partial",
-        "wat": "Page tree hierarchy, tags via django-taggit (flat)"
+        "wat": "Page tree hierarchy, tags via django-taggit (flat)",
+        "um": "full",
+        "umt": "Content tree hierarchy, Document Types as taxonomies"
       },
       {
         "name": "Vocabulary / tag system",
@@ -900,7 +960,9 @@
         "oc": "plugin",
         "oct": "Via plugins (e.g., RainLab tags)",
         "wa": "full",
-        "wat": "django-taggit integrated, ClusterTaggableManager"
+        "wat": "django-taggit integrated, ClusterTaggableManager",
+        "um": "full",
+        "umt": "Core Tags property editor"
       },
       {
         "name": "Unlimited depth hierarchy",
@@ -921,7 +983,9 @@
         "oc": "partial",
         "oct": "Laravel NestedSet / TreeModel",
         "wa": "full",
-        "wat": "Page tree — unlimited nesting"
+        "wat": "Page tree — unlimited nesting",
+        "um": "full",
+        "umt": "Content tree unlimited nesting"
       }
     ]
   },
@@ -956,7 +1020,9 @@
         "oc": "partial",
         "oct": "YAML plugin configs + DB-stored settings",
         "wa": "partial",
-        "wat": "Django fixtures, no native config sync"
+        "wat": "Django fixtures, no native config sync",
+        "um": "plugin",
+        "umt": "uSync plugin or Umbraco Deploy (Cloud) for config sync"
       },
       {
         "name": "Environment-specific config",
@@ -985,7 +1051,9 @@
         "oc": "full",
         "oct": "Laravel .env + config files per environment",
         "wa": "full",
-        "wat": "Django settings per env, .env support"
+        "wat": "Django settings per env, .env support",
+        "um": "full",
+        "umt": ".NET appsettings.json per environment"
       },
       {
         "name": "Config versioning (git)",
@@ -1014,7 +1082,9 @@
         "oc": "partial",
         "oct": "YAML/theme in git, settings in DB",
         "wa": "full",
-        "wat": "All config in Python code, git-ready"
+        "wat": "All config in Python code, git-ready",
+        "um": "plugin",
+        "umt": "uSync exports to files for git, Deploy for Cloud"
       }
     ]
   },
@@ -1048,7 +1118,9 @@
         "oc": "partial",
         "oct": "Laravel DB migrations (schema only)",
         "wa": "partial",
-        "wat": "Django management commands for import"
+        "wat": "Django management commands for import",
+        "um": "partial",
+        "umt": "CMSImport package, custom .NET migration scripts"
       },
       {
         "name": "Incremental migrations",
@@ -1070,7 +1142,9 @@
         "oc": "none",
         "oct": "None",
         "wa": "none",
-        "wat": "None"
+        "wat": "None",
+        "um": "none",
+        "umt": "None"
       },
       {
         "name": "Rollback capability",
@@ -1091,7 +1165,9 @@
         "oc": "partial",
         "oct": "Laravel DB migration rollback (schema only)",
         "wa": "none",
-        "wat": "None"
+        "wat": "None",
+        "um": "partial",
+        "umt": ".NET database migration rollback (schema only)"
       },
       {
         "name": "Multiple source formats",
@@ -1120,7 +1196,9 @@
         "oc": "partial",
         "oct": "CSV/import via plugins",
         "wa": "partial",
-        "wat": "Custom Django management commands"
+        "wat": "Custom Django management commands",
+        "um": "partial",
+        "umt": "Custom .NET import scripts, CMSImport package"
       }
     ]
   },
@@ -1154,7 +1232,9 @@
         "oc": "full",
         "oct": "Core form controllers + YAML blueprints (enhanced v3.6)",
         "wa": "full",
-        "wat": "wagtail.contrib.forms — GUI form builder for pages"
+        "wat": "wagtail.contrib.forms — GUI form builder for pages",
+        "um": "plugin",
+        "umt": "Umbraco Forms (official, paid) — GUI form builder"
       },
       {
         "name": "Conditional / dynamic fields",
@@ -1182,7 +1262,9 @@
         "oc": "full",
         "oct": "Core trigger system for field conditions",
         "wa": "partial",
-        "wat": "StreamField conditional rendering, custom JS"
+        "wat": "StreamField conditional rendering, custom JS",
+        "um": "full",
+        "umt": "Core property conditions in Document Types"
       },
       {
         "name": "Custom validators",
@@ -1210,7 +1292,9 @@
         "oc": "full",
         "oct": "Laravel validation rules",
         "wa": "full",
-        "wat": "Django validators, Wagtail form page validation"
+        "wat": "Django validators, Wagtail form page validation",
+        "um": "full",
+        "umt": ".NET validation, custom server-side validators"
       }
     ]
   },
@@ -1245,7 +1329,9 @@
         "oc": "full",
         "oct": "Core Media Manager with uploads, folders",
         "wa": "full",
-        "wat": "Core image/document library with collections"
+        "wat": "Core image/document library with collections",
+        "um": "full",
+        "umt": "Core Media section with folders, search, upload"
       },
       {
         "name": "Image manipulation",
@@ -1274,7 +1360,9 @@
         "oc": "full",
         "oct": "Core resizer tag + image processing (improved v3.7)",
         "wa": "full",
-        "wat": "Image renditions, focal points, responsive images"
+        "wat": "Image renditions, focal points, responsive images",
+        "um": "full",
+        "umt": "Core Image Cropper, focal point, responsive presets"
       },
       {
         "name": "Reusable media entities",
@@ -1302,7 +1390,9 @@
         "oc": "full",
         "oct": "File attachments reusable across models",
         "wa": "full",
-        "wat": "Images/documents as first-class models"
+        "wat": "Images/documents as first-class models",
+        "um": "full",
+        "umt": "Media items referenced across all content"
       },
       {
         "name": "Remote media (YouTube etc.)",
@@ -1331,7 +1421,9 @@
         "oc": "partial",
         "oct": "Custom embed integration",
         "wa": "plugin",
-        "wat": "Core oEmbed finders + wagtail-embed-videos"
+        "wat": "Core oEmbed finders + wagtail-embed-videos",
+        "um": "partial",
+        "umt": "Embed datatype for external media"
       },
       {
         "name": "File usage tracking",
@@ -1359,7 +1451,9 @@
         "oc": "partial",
         "oct": "Attachment relationships tracked",
         "wa": "full",
-        "wat": "Core usage tracking for images/documents (v4.0+)"
+        "wat": "Core usage tracking for images/documents (v4.0+)",
+        "um": "full",
+        "umt": "Core media usage tracking (v10+)"
       }
     ]
   },
@@ -1394,7 +1488,9 @@
         "oc": "partial",
         "oct": "Template caching (v4.1 {% cache %} tag)",
         "wa": "partial",
-        "wat": "Django cache framework, template fragment caching"
+        "wat": "Django cache framework, template fragment caching",
+        "um": "partial",
+        "umt": "Output cache, Umbraco cache refresher"
       },
       {
         "name": "Granular cache invalidation",
@@ -1423,7 +1519,9 @@
         "oc": "partial",
         "oct": "Laravel cache facades, manual clear",
         "wa": "partial",
-        "wat": "Django signals + cache invalidation, CDN plugins"
+        "wat": "Django signals + cache invalidation, CDN plugins",
+        "um": "partial",
+        "umt": "Content cache refresher on publish, HybridCache (v15+)"
       },
       {
         "name": "BigPipe / progressive rendering",
@@ -1449,7 +1547,9 @@
         "oc": "none",
         "oct": "None — traditional PHP rendering",
         "wa": "none",
-        "wat": "None — traditional Django rendering"
+        "wat": "None — traditional Django rendering",
+        "um": "none",
+        "umt": "None — traditional ASP.NET Core rendering"
       }
     ]
   },
@@ -1484,7 +1584,9 @@
         "oc": "partial",
         "oct": "Core page finder, Laravel Scout via plugin",
         "wa": "full",
-        "wat": "Core search backends (PostgreSQL FTS, Elasticsearch)"
+        "wat": "Core search backends (PostgreSQL FTS, Elasticsearch)",
+        "um": "full",
+        "umt": "Examine (Lucene.NET) — core full-text search"
       },
       {
         "name": "Faceted search",
@@ -1512,7 +1614,9 @@
         "oc": "none",
         "oct": "None",
         "wa": "plugin",
-        "wat": "Via Elasticsearch integration"
+        "wat": "Via Elasticsearch integration",
+        "um": "partial",
+        "umt": "Examine with custom facet indexing"
       },
       {
         "name": "Search API abstraction",
@@ -1539,7 +1643,9 @@
         "oc": "none",
         "oct": "None — custom via Laravel Scout plugin",
         "wa": "full",
-        "wat": "Pluggable search backends (database, Elasticsearch)"
+        "wat": "Pluggable search backends (database, Elasticsearch)",
+        "um": "full",
+        "umt": "Examine — pluggable indexers (Lucene, Azure Search)"
       }
     ]
   },
@@ -1565,7 +1671,9 @@
         "oc": "full",
         "oct": "Core backend lists with filters, sorting",
         "wa": "full",
-        "wat": "Page explorer with filters, search, status indicators"
+        "wat": "Page explorer with filters, search, status indicators",
+        "um": "full",
+        "umt": "Content tree, list views with search, filters, sorting"
       },
       {
         "name": "Bulk operations UI",
@@ -1585,7 +1693,9 @@
         "oc": "partial",
         "oct": "Limited bulk actions in lists",
         "wa": "partial",
-        "wat": "Limited bulk actions in admin"
+        "wat": "Limited bulk actions in admin",
+        "um": "partial",
+        "umt": "List view bulk actions (delete, move, publish)"
       },
       {
         "name": "Customizable dashboard",
@@ -1614,7 +1724,9 @@
         "oc": "full",
         "oct": "Core dashboard with drag-and-drop widgets (v4)",
         "wa": "full",
-        "wat": "Dashboard panels, custom summary items, hooks"
+        "wat": "Dashboard panels, custom summary items, hooks",
+        "um": "full",
+        "umt": "Custom dashboards, sections, trees in backoffice"
       },
       {
         "name": "Admin themes / branding",
@@ -1643,7 +1755,9 @@
         "oc": "full",
         "oct": "White-label branding, dark mode (v3.3+)",
         "wa": "partial",
-        "wat": "Custom logo, CSS overrides, limited theming"
+        "wat": "Custom logo, CSS overrides, limited theming",
+        "um": "partial",
+        "umt": "Custom CSS, login screen branding, limited theming"
       }
     ]
   },
@@ -1678,7 +1792,9 @@
         "oc": "full",
         "oct": "Laravel Artisan CLI",
         "wa": "full",
-        "wat": "Django manage.py + wagtail start CLI"
+        "wat": "Django manage.py + wagtail start CLI",
+        "um": "full",
+        "umt": "dotnet CLI templates, Umbraco project scaffolding"
       },
       {
         "name": "Hook / event system",
@@ -1707,7 +1823,9 @@
         "oc": "full",
         "oct": "Laravel events + behaviors system",
         "wa": "full",
-        "wat": "Wagtail hooks (30+) + Django signals"
+        "wat": "Wagtail hooks (30+) + Django signals",
+        "um": "full",
+        "umt": "Notification handlers (100+ events), composers, pipeline"
       },
       {
         "name": "Plugin/extension architecture",
@@ -1736,7 +1854,9 @@
         "oc": "full",
         "oct": "Plugin Marketplace, 1,000+ plugins",
         "wa": "full",
-        "wat": "Django apps, 300+ Wagtail packages"
+        "wat": "Django apps, 300+ Wagtail packages",
+        "um": "full",
+        "umt": "NuGet packages, Umbraco Marketplace (2,000+ packages)"
       },
       {
         "name": "TypeScript support",
@@ -1765,7 +1885,9 @@
         "oc": "none",
         "oct": "PHP — no TS",
         "wa": "none",
-        "wat": "Python/Django — no TS"
+        "wat": "Python/Django — no TS",
+        "um": "none",
+        "umt": "C#/.NET — no TS"
       },
       {
         "name": "API docs auto-generation",
@@ -1794,7 +1916,9 @@
         "oc": "partial",
         "oct": "Manual API documentation",
         "wa": "partial",
-        "wat": "REST API browsable, no auto-schema in core"
+        "wat": "REST API browsable, no auto-schema in core",
+        "um": "full",
+        "umt": "Swagger/OpenAPI for Content Delivery API"
       }
     ]
   },
@@ -1829,7 +1953,9 @@
         "oc": "partial",
         "oct": "GitHub security advisories, changelog patches",
         "wa": "full",
-        "wat": "Formal CVE process, security@wagtail.org"
+        "wat": "Formal CVE process, security@wagtail.org",
+        "um": "full",
+        "umt": "ISO 27001 certified, formal security process"
       },
       {
         "name": "Input sanitization",
@@ -1849,7 +1975,9 @@
         "oc": "full",
         "oct": "Twig auto-escape, Laravel input sanitization",
         "wa": "full",
-        "wat": "Django auto-escaping, template system"
+        "wat": "Django auto-escaping, template system",
+        "um": "full",
+        "umt": ".NET auto-encoding, Razor HTML escaping"
       },
       {
         "name": "CSRF / XSS protection",
@@ -1869,7 +1997,9 @@
         "oc": "full",
         "oct": "Laravel CSRF tokens, Twig auto-escaping",
         "wa": "full",
-        "wat": "Django CSRF middleware, template escaping"
+        "wat": "Django CSRF middleware, template escaping",
+        "um": "full",
+        "umt": "ASP.NET Core antiforgery tokens, auto-encoding"
       },
       {
         "name": "SSO / SAML / LDAP",
@@ -1898,7 +2028,9 @@
         "oc": "none",
         "oct": "None — no native SSO support",
         "wa": "plugin",
-        "wat": "django-allauth, django-saml2-auth, python-ldap"
+        "wat": "django-allauth, django-saml2-auth, python-ldap",
+        "um": "plugin",
+        "umt": "External login providers (Azure AD, Google), community SAML packages"
       },
       {
         "name": "Two-factor authentication (2FA)",
@@ -1927,7 +2059,9 @@
         "oc": "plugin",
         "oct": "Backend 2FA plugin",
         "wa": "plugin",
-        "wat": "django-otp, django-two-factor-auth"
+        "wat": "django-otp, django-two-factor-auth",
+        "um": "full",
+        "umt": "Core 2FA since Umbraco 10"
       },
       {
         "name": "Password policy (complexity, expiry)",
@@ -1956,7 +2090,9 @@
         "oc": "none",
         "oct": "None — no configurable policy",
         "wa": "partial",
-        "wat": "Django AUTH_PASSWORD_VALIDATORS"
+        "wat": "Django AUTH_PASSWORD_VALIDATORS",
+        "um": "full",
+        "umt": "ASP.NET Identity (configurable complexity, lockout)"
       },
       {
         "name": "Brute force / login flood protection",
@@ -1985,7 +2121,9 @@
         "oc": "partial",
         "oct": "Laravel login throttling middleware",
         "wa": "partial",
-        "wat": "django-axes, Django rate limiting"
+        "wat": "django-axes, Django rate limiting",
+        "um": "full",
+        "umt": "ASP.NET Identity account lockout"
       },
       {
         "name": "Session timeout (auto-logout)",
@@ -2014,7 +2152,9 @@
         "oc": "plugin",
         "oct": "Via Logout plugin",
         "wa": "full",
-        "wat": "Django SESSION_COOKIE_AGE configurable"
+        "wat": "Django SESSION_COOKIE_AGE configurable",
+        "um": "full",
+        "umt": "Configurable session timeout"
       },
       {
         "name": "Concurrent session limits",
@@ -2043,7 +2183,9 @@
         "oc": "none",
         "oct": "None",
         "wa": "none",
-        "wat": "None"
+        "wat": "None",
+        "um": "none",
+        "umt": "None"
       },
       {
         "name": "Security headers (CSP, HSTS, X-Frame)",
@@ -2072,7 +2214,9 @@
         "oc": "plugin",
         "oct": "Via security headers plugin",
         "wa": "partial",
-        "wat": "Django SecurityMiddleware (HSTS, X-Frame)"
+        "wat": "Django SecurityMiddleware (HSTS, X-Frame)",
+        "um": "partial",
+        "umt": "Via ASP.NET Core middleware configuration"
       },
       {
         "name": "CAPTCHA / bot protection",
@@ -2101,7 +2245,9 @@
         "oc": "plugin",
         "oct": "Via CAPTCHA plugins",
         "wa": "plugin",
-        "wat": "django-recaptcha, wagtail-captcha"
+        "wat": "django-recaptcha, wagtail-captcha",
+        "um": "plugin",
+        "umt": "Umbraco Forms reCAPTCHA, community packages"
       },
       {
         "name": "Security change notifications",
@@ -2130,7 +2276,9 @@
         "oc": "none",
         "oct": "None",
         "wa": "partial",
-        "wat": "Django signals for user changes"
+        "wat": "Django signals for user changes",
+        "um": "partial",
+        "umt": "ASP.NET Identity events, custom notification handlers"
       }
     ]
   },
@@ -2165,7 +2313,9 @@
         "oc": "partial",
         "oct": "Custom Laravel REST routes, not auto-generated",
         "wa": "full",
-        "wat": "Core Wagtail API v2 (pages, images, documents)"
+        "wat": "Core Wagtail API v2 (pages, images, documents)",
+        "um": "full",
+        "umt": "Content Delivery API (v12+) + Management API (v14+)"
       },
       {
         "name": "GraphQL API",
@@ -2193,7 +2343,9 @@
         "oc": "plugin",
         "oct": "Via community plugin",
         "wa": "plugin",
-        "wat": "wagtail-grapple"
+        "wat": "wagtail-grapple",
+        "um": "none",
+        "umt": "None — no native GraphQL"
       },
       {
         "name": "Webhooks",
@@ -2222,7 +2374,9 @@
         "oc": "partial",
         "oct": "Custom via Laravel events",
         "wa": "plugin",
-        "wat": "django-webhooks, custom signals"
+        "wat": "django-webhooks, custom signals",
+        "um": "full",
+        "umt": "Core webhooks (v12+)"
       },
       {
         "name": "Rate limiting",
@@ -2250,7 +2404,9 @@
         "oc": "partial",
         "oct": "Laravel middleware rate limiting",
         "wa": "partial",
-        "wat": "Django middleware, django-ratelimit"
+        "wat": "Django middleware, django-ratelimit",
+        "um": "partial",
+        "umt": "Via ASP.NET Core middleware"
       },
       {
         "name": "Real-time / WebSockets",
@@ -2275,7 +2431,9 @@
         "oc": "none",
         "oct": "None",
         "wa": "none",
-        "wat": "None — Django Channels possible but not built-in"
+        "wat": "None — Django Channels possible but not built-in",
+        "um": "none",
+        "umt": "None — SignalR possible via custom .NET"
       }
     ]
   },
@@ -2310,7 +2468,9 @@
         "oc": "full",
         "oct": "Core page slugs, dynamic URLs",
         "wa": "full",
-        "wat": "Core page slugs, URL paths"
+        "wat": "Core page slugs, URL paths",
+        "um": "full",
+        "umt": "Core URL segments per content node"
       },
       {
         "name": "URL redirects",
@@ -2338,7 +2498,9 @@
         "oc": "plugin",
         "oct": "Via redirect manager plugins",
         "wa": "full",
-        "wat": "wagtail.contrib.redirects (core contrib)"
+        "wat": "wagtail.contrib.redirects (core contrib)",
+        "um": "full",
+        "umt": "Core URL Tracker — auto redirect on URL change"
       },
       {
         "name": "Menu system",
@@ -2367,7 +2529,9 @@
         "oc": "full",
         "oct": "Core Menu Manager with drag-and-drop",
         "wa": "plugin",
-        "wat": "wagtailmenus package"
+        "wat": "wagtailmenus package",
+        "um": "partial",
+        "umt": "Navigation via content tree, no dedicated menu manager"
       }
     ]
   },
@@ -2402,7 +2566,9 @@
         "oc": "none",
         "oct": "None",
         "wa": "plugin",
-        "wat": "wagtail-ai package (OpenAI integration)"
+        "wat": "wagtail-ai package (OpenAI integration)",
+        "um": "plugin",
+        "umt": "Community packages (uMind AI)"
       },
       {
         "name": "AI image generation",
@@ -2431,7 +2597,9 @@
         "oc": "none",
         "oct": "None",
         "wa": "none",
-        "wat": "None"
+        "wat": "None",
+        "um": "none",
+        "umt": "None"
       },
       {
         "name": "AI-powered translation",
@@ -2460,7 +2628,9 @@
         "oc": "none",
         "oct": "None",
         "wa": "none",
-        "wat": "None"
+        "wat": "None",
+        "um": "plugin",
+        "umt": "Community packages (DeepL integration)"
       },
       {
         "name": "AI metadata / auto-tagging / alt text",
@@ -2489,7 +2659,9 @@
         "oc": "none",
         "oct": "None",
         "wa": "plugin",
-        "wat": "wagtail-ai accessibility checks (concept)"
+        "wat": "wagtail-ai accessibility checks (concept)",
+        "um": "none",
+        "umt": "None"
       },
       {
         "name": "AI search (RAG / semantic / vector)",
@@ -2518,7 +2690,9 @@
         "oc": "none",
         "oct": "None",
         "wa": "none",
-        "wat": "None — roadmap item"
+        "wat": "None — roadmap item",
+        "um": "none",
+        "umt": "None"
       },
       {
         "name": "AI chatbot / assistant",
@@ -2547,7 +2721,9 @@
         "oc": "none",
         "oct": "None",
         "wa": "none",
-        "wat": "None"
+        "wat": "None",
+        "um": "none",
+        "umt": "None"
       },
       {
         "name": "AI content moderation / validation",
@@ -2576,7 +2752,9 @@
         "oc": "none",
         "oct": "None",
         "wa": "none",
-        "wat": "None"
+        "wat": "None",
+        "um": "none",
+        "umt": "None"
       },
       {
         "name": "AI provider framework (multi-provider)",
@@ -2605,7 +2783,9 @@
         "oc": "none",
         "oct": "None",
         "wa": "partial",
-        "wat": "wagtail-ai — LLM integration, limited providers"
+        "wat": "wagtail-ai — LLM integration, limited providers",
+        "um": "none",
+        "umt": "None"
       }
     ]
   },
@@ -2640,7 +2820,9 @@
         "oc": "full",
         "oct": "Core live preview",
         "wa": "full",
-        "wat": "Core live preview in admin"
+        "wat": "Core live preview in admin",
+        "um": "full",
+        "umt": "Core content preview, Canvas mode"
       },
       {
         "name": "Visual page builder (drag & drop)",
@@ -2669,7 +2851,9 @@
         "oc": "partial",
         "oct": "Component-based layout building",
         "wa": "partial",
-        "wat": "StreamField block insertion/reordering, not true D&D"
+        "wat": "StreamField block insertion/reordering, not true D&D",
+        "um": "full",
+        "umt": "Block Grid Editor — drag-and-drop layout (v10.4+)"
       },
       {
         "name": "Inline / on-page editing",
@@ -2698,7 +2882,9 @@
         "oc": "partial",
         "oct": "Preview-assisted editing",
         "wa": "partial",
-        "wat": "Preview-based editing, not true inline"
+        "wat": "Preview-based editing, not true inline",
+        "um": "partial",
+        "umt": "Preview mode, not true inline editing"
       }
     ]
   },
@@ -2733,7 +2919,9 @@
         "oc": "partial",
         "oct": "Site Groups (v3.5+)",
         "wa": "full",
-        "wat": "Core — Site model, multiple sites from one install"
+        "wat": "Core — Site model, multiple sites from one install",
+        "um": "full",
+        "umt": "Core multi-site with domain bindings"
       },
       {
         "name": "Content sharing across sites",
@@ -2762,7 +2950,9 @@
         "oc": "partial",
         "oct": "Via Site Groups",
         "wa": "full",
-        "wat": "Shared page tree and snippets across sites"
+        "wat": "Shared page tree and snippets across sites",
+        "um": "full",
+        "umt": "Shared content tree, configurable start nodes"
       },
       {
         "name": "White-label / tenant branding",
@@ -2791,7 +2981,9 @@
         "oc": "full",
         "oct": "Core white-label branding",
         "wa": "partial",
-        "wat": "Custom admin CSS, logo per site"
+        "wat": "Custom admin CSS, logo per site",
+        "um": "partial",
+        "umt": "Custom login branding, limited admin theming"
       }
     ]
   },
@@ -2826,7 +3018,9 @@
         "oc": "none",
         "oct": "None",
         "wa": "none",
-        "wat": "None"
+        "wat": "None",
+        "um": "plugin",
+        "umt": "Umbraco Engage (official, paid)"
       },
       {
         "name": "A/B testing",
@@ -2854,7 +3048,9 @@
         "oc": "none",
         "oct": "None",
         "wa": "none",
-        "wat": "None"
+        "wat": "None",
+        "um": "plugin",
+        "umt": "Umbraco Engage (official, paid)"
       },
       {
         "name": "Built-in analytics",
@@ -2883,7 +3079,9 @@
         "oc": "none",
         "oct": "None",
         "wa": "none",
-        "wat": "None — external integrations"
+        "wat": "None — external integrations",
+        "um": "plugin",
+        "umt": "Umbraco Engage (official, paid)"
       }
     ]
   },
@@ -2918,7 +3116,9 @@
         "oc": "partial",
         "oct": "Basic accessible admin UI",
         "wa": "full",
-        "wat": "Dedicated accessibility team, ATAG compliance, admin a11y"
+        "wat": "Dedicated accessibility team, ATAG compliance, admin a11y",
+        "um": "partial",
+        "umt": "Accessible backoffice UI, Tiptap editor a11y"
       },
       {
         "name": "Alt text enforcement / a11y checks",
@@ -2947,7 +3147,9 @@
         "oc": "partial",
         "oct": "Alt text field available, not enforced",
         "wa": "full",
-        "wat": "Configurable alt text requirement, accessibility checker"
+        "wat": "Configurable alt text requirement, accessibility checker",
+        "um": "partial",
+        "umt": "Alt text field available, not enforced"
       }
     ]
   },
@@ -2982,7 +3184,9 @@
         "oc": "plugin",
         "oct": "SEO Toolkit plugin (meta per page/Tailor entry)",
         "wa": "full",
-        "wat": "Core SEO fields (search_description), Promote tab"
+        "wat": "Core SEO fields (search_description), Promote tab",
+        "um": "partial",
+        "umt": "Custom Document Type properties, SEO packages"
       },
       {
         "name": "Open Graph / Twitter Cards",
@@ -3011,7 +3215,9 @@
         "oc": "plugin",
         "oct": "SEO Toolkit plugin (OG + Twitter Cards)",
         "wa": "plugin",
-        "wat": "wagtail-metadata, wagtail-seo packages"
+        "wat": "wagtail-metadata, wagtail-seo packages",
+        "um": "partial",
+        "umt": "Custom Document Type properties, community packages"
       },
       {
         "name": "XML sitemap generation",
@@ -3040,7 +3246,9 @@
         "oc": "plugin",
         "oct": "Sitemap Manager plugin",
         "wa": "full",
-        "wat": "wagtail.contrib.sitemaps (core contrib)"
+        "wat": "wagtail.contrib.sitemaps (core contrib)",
+        "um": "plugin",
+        "umt": "Community packages (SEO Toolkit, sitemap generators)"
       },
       {
         "name": "Canonical URL management",
@@ -3069,7 +3277,9 @@
         "oc": "partial",
         "oct": "Clean URLs core, canonical via plugin",
         "wa": "partial",
-        "wat": "Manual via page models, no core auto-canonical"
+        "wat": "Manual via page models, no core auto-canonical",
+        "um": "partial",
+        "umt": "Custom via Document Type properties"
       },
       {
         "name": "Schema.org / structured data (JSON-LD)",
@@ -3098,7 +3308,9 @@
         "oc": "plugin",
         "oct": "SEO Toolkit plugin (JSON-LD)",
         "wa": "partial",
-        "wat": "Custom via templates"
+        "wat": "Custom via templates",
+        "um": "partial",
+        "umt": "Custom via Razor templates"
       },
       {
         "name": "Robots meta / noindex control",
@@ -3127,7 +3339,9 @@
         "oc": "plugin",
         "oct": "SEO Toolkit plugin (robots.txt editor)",
         "wa": "partial",
-        "wat": "Custom via page models, wagtail-seo plugin"
+        "wat": "Custom via page models, wagtail-seo plugin",
+        "um": "partial",
+        "umt": "Custom Document Type properties"
       },
       {
         "name": "Hreflang tags (multilingual SEO)",
@@ -3156,7 +3370,9 @@
         "oc": "plugin",
         "oct": "Via RainLab.Translate + SEO plugin",
         "wa": "partial",
-        "wat": "Via wagtail-localize + custom templates"
+        "wat": "Via wagtail-localize + custom templates",
+        "um": "partial",
+        "umt": "Custom via Razor templates with language variants"
       },
       {
         "name": "Breadcrumbs",
@@ -3185,7 +3401,9 @@
         "oc": "partial",
         "oct": "Theme-based breadcrumbs",
         "wa": "full",
-        "wat": "Core page tree breadcrumbs"
+        "wat": "Core page tree breadcrumbs",
+        "um": "full",
+        "umt": "Core content tree ancestor traversal"
       },
       {
         "name": "Real-time SEO analysis / content scoring",
@@ -3214,7 +3432,9 @@
         "oc": "plugin",
         "oct": "SEO Toolkit plugin (SEO Score tab)",
         "wa": "none",
-        "wat": "None"
+        "wat": "None",
+        "um": "plugin",
+        "umt": "SEO Checker package"
       }
     ]
   }

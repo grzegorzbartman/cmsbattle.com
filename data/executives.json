@@ -220,6 +220,26 @@
     "avoidIf": "You have a small team, need JS/TS stack, want headless-first, or need quick MVP."
   },
   {
+    "name": "Umbraco 17",
+    "color": "var(--umbraco)",
+    "strengths": [
+      "Exceptional content modeling — Document Types, compositions, Block Grid/List editors",
+      "Core multilingual with per-property language variants and fallback chains (since v8)",
+      "Enterprise security — ISO 27001 certified, core 2FA, ASP.NET Identity, formal advisory process",
+      "Built-in Content Delivery API + Management API + webhooks for headless/hybrid mode (v12+)",
+      "Block Grid Editor — true drag-and-drop visual page building with custom blocks (v10.4+)"
+    ],
+    "weaknesses": [
+      "C#/.NET — no TypeScript, .NET expertise required, smaller open-source community than PHP CMS",
+      "SEO features require custom properties or packages — no core SEO tab",
+      "No AI features built-in — relies on community packages",
+      "Config sync requires uSync plugin or paid Umbraco Deploy — not core",
+      "No native GraphQL API — REST only"
+    ],
+    "bestFor": ".NET developers and agencies building enterprise websites, multilingual portals, and content-rich platforms. Strong fit for organizations invested in the Microsoft ecosystem.",
+    "avoidIf": "You need a JS/TS stack, built-in SEO tools, AI features, GraphQL API, or a fully open-source solution with free config management."
+  },
+  {
     "name": "Wagtail 7",
     "color": "var(--wagtail)",
     "strengths": [

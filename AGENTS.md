@@ -2,7 +2,7 @@
 
 ## What is this project?
 
-A single-page web application comparing **13 CMS platforms** across **110 features** in **24 categories**. Built with Astro (Node.js) for static site generation, deployed on Cloudflare Pages. All comparison data lives in JSON files; Astro imports them at build time and renders static HTML; Alpine.js handles client-side interactivity (feature tables, QFD decision matrix, executive summaries, dark mode).
+A single-page web application comparing **14 CMS platforms** across **110 features** in **24 categories**. Built with Astro (Node.js) for static site generation, deployed on Cloudflare Pages. All comparison data lives in JSON files; Astro imports them at build time and renders static HTML; Alpine.js handles client-side interactivity (feature tables, QFD decision matrix, executive summaries, dark mode).
 
 ### CMS platforms compared (alphabetical)
 
@@ -19,6 +19,7 @@ A single-page web application comparing **13 CMS platforms** across **110 featur
 | `s`  | Strapi v5   | Headless CMS           |
 | `su` | Sulu CMS 3  | Full-stack CMS         |
 | `t3` | TYPO3 14    | Full-stack CMS         |
+| `um` | Umbraco 17  | Full-stack CMS         |
 | `wa` | Wagtail 7   | Full-stack CMS         |
 | `wp` | WordPress   | Full-stack CMS         |
 
@@ -55,7 +56,7 @@ cmsbattle.com/
 ├── package.json               # Astro dependency
 ├── tsconfig.json              # TypeScript config (extends Astro)
 ├── data/                      # ★ ALL comparison data (JSON)
-│   ├── categories.json        # 24 categories, 110 features, scores for 13 CMS
+│   ├── categories.json        # 24 categories, 110 features, scores for 14 CMS
 │   ├── executives.json        # Executive summaries (strengths, weaknesses, bestFor, avoidIf)
 │   ├── metrics.json           # Hard numbers (GitHub stars, contributors, extensions, age, market share)
 │   └── releases.json          # Latest version + release date per CMS
@@ -68,7 +69,7 @@ cmsbattle.com/
 │   ├── pages/
 │   │   └── index.astro        # Main page — imports all JSON + components (replaces PHP controller)
 │   └── components/
-│       ├── Hero.astro         # Hero section (stats: 12 systems, 24 categories, 110 features)
+│       ├── Hero.astro         # Hero section (stats: 14 systems, 24 categories, 110 features)
 │       ├── Nav.astro          # Sticky navigation (Alpine.js scroll spy)
 │       ├── Overview.astro     # CMS overview cards with release info (build-time rendered)
 │       ├── Metrics.astro      # Hard numbers table (build-time rendered loop)
@@ -95,8 +96,8 @@ Array of category objects. Each category has `name`, `icon`, and `features` arra
 
 Each feature object has:
 - `name` — feature name (string)
-- CMS score keys: `cr`, `d`, `wp`, `t3`, `s`, `su`, `p`, `gh`, `jo`, `k`, `oc`, `di`, `wa`
-- CMS tooltip keys: `dt`, `wpt`, `t3t`, `st`, `sut`, `pt`, `ght`, `jot`, `kt`, `oct`, `dit`, `crt`, `wat`
+- CMS score keys: `cr`, `d`, `wp`, `t3`, `s`, `su`, `p`, `gh`, `jo`, `k`, `oc`, `di`, `um`, `wa`
+- CMS tooltip keys: `dt`, `wpt`, `t3t`, `st`, `sut`, `pt`, `ght`, `jot`, `kt`, `oct`, `dit`, `crt`, `umt`, `wat`
 
 Score values: `"full"` | `"partial"` | `"plugin"` | `"none"`
 
@@ -118,7 +119,7 @@ Score values are used by the feature comparison tables to show support level per
 
 ### `data/releases.json`
 
-Object with `_meta` and one key per CMS (`craft`, `drupal`, `wordpress`, `typo3`, `strapi`, `payload`, `ghost`, `joomla`, `keystone`, `directus`, `october`, `sulu`). Each has: `name`, `latest_version`, `release_date`, `release_url`, `releases_page`, `github`. The `github` field is used as a clickable link on the CMS name in the Metrics table — always use the GitHub URL (even for mirrors).
+Object with `_meta` and one key per CMS (`craft`, `drupal`, `wordpress`, `typo3`, `strapi`, `payload`, `ghost`, `joomla`, `keystone`, `directus`, `october`, `sulu`, `umbraco`). Each has: `name`, `latest_version`, `release_date`, `release_url`, `releases_page`, `github`. The `github` field is used as a clickable link on the CMS name in the Metrics table — always use the GitHub URL (even for mirrors).
 
 ### `data/executives.json`
 
@@ -151,7 +152,7 @@ metrics.json    ─┘
 
 ### Adding a new feature to an existing category
 
-1. Edit `data/categories.json` — find the category, add a feature object with all 13 CMS scores + 13 tooltips.
+1. Edit `data/categories.json` — find the category, add a feature object with all 14 CMS scores + 14 tooltips.
 2. Update feature count in `src/components/Hero.astro` and `src/components/Overview.astro`.
 
 ### Adding a new category
@@ -188,16 +189,16 @@ Light mode is default. Dark mode via `data-theme="dark"` on `<html>`. Toggle but
 
 CMS color variables (used in cards, badges, QFD wizard):
 ```css
---craft, --drupal, --wordpress, --typo3, --strapi, --sulu, --payload, --ghost, --joomla, --keystone, --october, --directus, --wagtail
+--craft, --drupal, --wordpress, --typo3, --strapi, --sulu, --payload, --ghost, --joomla, --keystone, --october, --directus, --umbraco, --wagtail
 ```
 
 ---
 
 ## Key conventions
 
-1. **Alphabetical order** — CMS platforms are always listed alphabetically (Craft CMS, Directus, Drupal, Ghost, Joomla, KeystoneJS, October CMS, Payload, Strapi, Sulu, TYPO3, Wagtail, WordPress) in all data files, components, and JS.
-2. **CMS key mapping** — `cr`=Craft CMS, `d`=Drupal, `wp`=WordPress, `t3`=TYPO3, `s`=Strapi, `su`=Sulu, `p`=Payload, `gh`=Ghost, `jo`=Joomla, `k`=KeystoneJS, `oc`=October CMS, `di`=Directus, `wa`=Wagtail.
-3. **Tooltip keys** — same as CMS key + `t` suffix: `crt`, `dt`, `wpt`, `t3t`, `st`, `sut`, `pt`, `ght`, `jot`, `kt`, `oct`, `dit`, `wat`.
+1. **Alphabetical order** — CMS platforms are always listed alphabetically (Craft CMS, Directus, Drupal, Ghost, Joomla, KeystoneJS, October CMS, Payload, Strapi, Sulu, TYPO3, Umbraco, Wagtail, WordPress) in all data files, components, and JS.
+2. **CMS key mapping** — `cr`=Craft CMS, `d`=Drupal, `wp`=WordPress, `t3`=TYPO3, `s`=Strapi, `su`=Sulu, `p`=Payload, `gh`=Ghost, `jo`=Joomla, `k`=KeystoneJS, `oc`=October CMS, `di`=Directus, `um`=Umbraco, `wa`=Wagtail.
+3. **Tooltip keys** — same as CMS key + `t` suffix: `crt`, `dt`, `wpt`, `t3t`, `st`, `sut`, `pt`, `ght`, `jot`, `kt`, `oct`, `dit`, `umt`, `wat`.
 4. **No build tools for CSS/JS** — CSS and JS are served directly from `public/`. Alpine.js loaded via CDN. No webpack, Vite, or npm for frontend assets. Astro only handles HTML generation.
 5. **Data in JSON, presentation in Astro/Alpine** — never hardcode CMS data in components. All data comes from `data/*.json`. Alpine.js components use `x-for`, `x-data`, `x-show` etc. in Astro templates.
 6. **Section display order** — hero → nav → overview → metrics → headless → comparison (feature tables) → QFD wizard → executive → confidence → footer.

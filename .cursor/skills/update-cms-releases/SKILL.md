@@ -7,7 +7,7 @@ description: Update CMS release versions and dates in data/releases.json. Use wh
 
 ## What This Does
 
-Updates `data/releases.json` with the latest release version and date for each of the 13 CMS platforms tracked in this comparison project.
+Updates `data/releases.json` with the latest release version and date for each of the 14 CMS platforms tracked in this comparison project.
 
 ## Quick Reference: Where to Check
 
@@ -25,6 +25,7 @@ Updates `data/releases.json` with the latest release version and date for each o
 | **KeystoneJS** | [github.com/keystonejs/keystone/releases](https://github.com/keystonejs/keystone/releases) | [keystonejs.com/releases](https://keystonejs.com/releases) |
 | **October CMS** | [github.com/octobercms/october/releases](https://github.com/octobercms/october/releases) | [octobercms.com/changelog](https://octobercms.com/changelog) |
 | **Directus** | [github.com/directus/directus/releases](https://github.com/directus/directus/releases) | [directus.io/docs/releases](https://directus.io/docs/releases) |
+| **Umbraco** | [github.com/umbraco/Umbraco-CMS/releases](https://github.com/umbraco/Umbraco-CMS/releases) | [releases.umbraco.com](https://releases.umbraco.com) |
 | **Wagtail** | [github.com/wagtail/wagtail/releases](https://github.com/wagtail/wagtail/releases) | [docs.wagtail.org/en/latest/releases](https://docs.wagtail.org/en/latest/releases/) |
 
 ## Workflow
@@ -59,6 +60,7 @@ Tips:
 - **KeystoneJS**: Slow release cadence -- may not have changed. Package is `@keystone-6/core`. If no new release, add/update the `note` field.
 - **October CMS**: Version is `4.x.x`. Active development, frequent patch releases. Check GitHub releases or octobercms.com/changelog.
 - **Directus**: Monthly release cycle. Version is `v11.x.x`.
+- **Umbraco**: New major every 6 months (aligned with .NET). Current LTS is `17.x`. Check GitHub releases or releases.umbraco.com.
 - **Wagtail**: Quarterly release cycle. Version is `7.x`. Built on Django. Check GitHub releases or docs.wagtail.org release notes.
 
 ### Step 3: Update `data/releases.json`

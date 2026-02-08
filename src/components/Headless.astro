@@ -2,7 +2,7 @@
   <div class="section-header">
     <div class="section-tag">03b &mdash; headless mode</div>
     <h2>Full-stack CMS as headless / hybrid</h2>
-    <p class="section-desc">All eight traditional CMS platforms can also serve content via API, working as headless or hybrid (server-rendered + API) systems. Here's how they compare in that mode.</p>
+    <p class="section-desc">All nine traditional CMS platforms can also serve content via API, working as headless or hybrid (server-rendered + API) systems. Here's how they compare in that mode.</p>
   </div>
 
   <div class="headless-grid">
@@ -280,6 +280,49 @@
       </div>
     </div>
 
+    <!-- UMBRACO -->
+    <div class="headless-card" style="--card-color: var(--umbraco)">
+      <div class="headless-card-header">
+        <h3>Umbraco</h3>
+        <span class="headless-verdict headless-good">Good headless</span>
+      </div>
+      <p class="headless-desc">Umbraco ships with a built-in Content Delivery API (since v12) and Management API (since v14), enabling full headless mode. Built on ASP.NET Core, it provides auto-generated REST endpoints for all content types with filtering, sorting, and pagination.</p>
+      <div class="headless-apis">
+        <div class="api-item api-core">
+          <span class="api-label">REST API</span>
+          <span class="api-status">Core</span>
+          <span class="api-detail">Content Delivery API — auto-generated endpoints for all Document Types. Filtering, sorting, pagination, nested content expansion.</span>
+        </div>
+        <div class="api-item api-core">
+          <span class="api-label">Management API</span>
+          <span class="api-status">Core</span>
+          <span class="api-detail">Management API (v14+) — full CRUD for content, media, members. OAuth 2.0 client credentials for server-to-server.</span>
+        </div>
+      </div>
+      <div class="headless-meta">
+        <div class="meta-row">
+          <span class="meta-label">Hybrid mode</span>
+          <span class="meta-val">Yes &mdash; Razor server-side templates + Content Delivery API for JS components or external consumers</span>
+        </div>
+        <div class="meta-row">
+          <span class="meta-label">Popular frontends</span>
+          <span class="meta-val">Next.js, Nuxt, Astro, React SPA, Angular, Blazor</span>
+        </div>
+        <div class="meta-row">
+          <span class="meta-label">SDKs / helpers</span>
+          <span class="meta-val">Umbraco Content Delivery SDK (.NET), custom fetch to /umbraco/delivery/api/v2/</span>
+        </div>
+        <div class="meta-row">
+          <span class="meta-label">Auth for API</span>
+          <span class="meta-val">API keys, OAuth 2.0 client credentials, ASP.NET Core auth middleware</span>
+        </div>
+        <div class="meta-row">
+          <span class="meta-label">Headless maturity</span>
+          <span class="meta-val">Content Delivery API since v12 (2023). Growing adoption. Management API since v14 (2024).</span>
+        </div>
+      </div>
+    </div>
+
     <!-- WAGTAIL -->
     <div class="headless-card" style="--card-color: var(--wagtail)">
       <div class="headless-card-header">
@@ -371,7 +414,7 @@
   <div class="method-note" style="margin-top: 1.5rem;">
     <div class="note-icon">!</div>
     <div>
-      <strong>Note:</strong> The 5 headless CMS platforms (Directus, Ghost, KeystoneJS, Payload, Strapi) are <em>API-only by design</em> &mdash; they don't have a traditional server-rendered frontend. The comparison above focuses on the 8 full-stack CMS platforms and their ability to also work in headless/hybrid mode.
+      <strong>Note:</strong> The 5 headless CMS platforms (Directus, Ghost, KeystoneJS, Payload, Strapi) are <em>API-only by design</em> &mdash; they don't have a traditional server-rendered frontend. The comparison above focuses on the 9 full-stack CMS platforms and their ability to also work in headless/hybrid mode.
     </div>
   </div>
 </section>

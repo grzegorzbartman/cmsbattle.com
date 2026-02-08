@@ -6,7 +6,7 @@ interface Props {
 
 const { releases, metrics } = Astro.props;
 
-const cmsOrder = ['craft', 'directus', 'drupal', 'ghost', 'joomla', 'keystone', 'october', 'payload', 'strapi', 'sulu', 'typo3', 'wagtail', 'wordpress'];
+const cmsOrder = ['craft', 'directus', 'drupal', 'ghost', 'joomla', 'keystone', 'october', 'payload', 'strapi', 'sulu', 'typo3', 'umbraco', 'wagtail', 'wordpress'];
 
 const cmsColors: Record<string, string> = {
   craft: 'var(--craft)',
@@ -20,6 +20,7 @@ const cmsColors: Record<string, string> = {
   strapi: 'var(--strapi)',
   sulu: 'var(--sulu)',
   typo3: 'var(--typo3)',
+  umbraco: 'var(--umbraco)',
   wagtail: 'var(--wagtail)',
   wordpress: 'var(--wordpress)',
 };
