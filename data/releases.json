@@ -113,6 +113,14 @@
     "releases_page": "https://github.com/octobercms/october/releases",
     "github": "https://github.com/octobercms/october"
   },
+  "plone": {
+    "name": "Plone",
+    "latest_version": "6.1.4",
+    "release_date": "2026-01-17",
+    "release_url": "https://plone.org/download/releases/6.1.4",
+    "releases_page": "https://plone.org/download/releases",
+    "github": "https://github.com/plone/Products.CMFPlone"
+  },
   "directus": {
     "name": "Directus",
     "latest_version": "11.15.0",

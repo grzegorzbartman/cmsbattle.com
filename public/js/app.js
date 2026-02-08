@@ -15,6 +15,7 @@ const CMS_NAMES = {
   k:  'KeystoneJS 6',
   oc: 'October CMS',
   p:  'Payload CMS',
+  pl: 'Plone 6',
   s:  'Strapi v5',
   su: 'Sulu CMS',
   t3: 'TYPO3',
@@ -22,16 +23,16 @@ const CMS_NAMES = {
   wa: 'Wagtail',
   wp: 'WordPress'
 };
-const CMS_KEYS = ['cr', 'di', 'd', 'gh', 'jo', 'k', 'oc', 'p', 's', 'su', 't3', 'um', 'wa', 'wp'];
+const CMS_KEYS = ['cr', 'di', 'd', 'gh', 'jo', 'k', 'oc', 'p', 'pl', 's', 'su', 't3', 'um', 'wa', 'wp'];
 
 const TOOLTIP_KEYS = {
   cr: 'crt', di: 'dit', d: 'dt', gh: 'ght', jo: 'jot',
-  k: 'kt', oc: 'oct', p: 'pt', s: 'st', su: 'sut', t3: 't3t', um: 'umt', wa: 'wat', wp: 'wpt'
+  k: 'kt', oc: 'oct', p: 'pt', pl: 'plt', s: 'st', su: 'sut', t3: 't3t', um: 'umt', wa: 'wat', wp: 'wpt'
 };
 
 const CMS_SHORT = {
   cr: 'Craft', di: 'Directus', d: 'Drupal', gh: 'Ghost', jo: 'Joomla',
-  k: 'Keystone', oc: 'October', p: 'Payload', s: 'Strapi', su: 'Sulu', t3: 'TYPO3', um: 'Umbraco', wa: 'Wagtail', wp: 'WP'
+  k: 'Keystone', oc: 'October', p: 'Payload', pl: 'Plone', s: 'Strapi', su: 'Sulu', t3: 'TYPO3', um: 'Umbraco', wa: 'Wagtail', wp: 'WP'
 };
 
 const ALT_REASONS = {
@@ -43,6 +44,7 @@ const ALT_REASONS = {
   k:  'you want a minimalist system',
   oc: 'you want Laravel-based CMS',
   p:  'you work with Next.js',
+  pl: 'you need maximum security & Python stack',
   s:  'you value quick start',
   su: 'you need Symfony-based multilingual',
   t3: 'you need enterprise multilingual',

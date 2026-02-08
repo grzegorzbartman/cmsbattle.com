@@ -10,7 +10,7 @@ const { releases } = Astro.props;
   <div class="section-header">
     <div class="section-tag">01 &mdash; overview</div>
     <h2>The contenders</h2>
-    <p class="section-desc">Nine traditional (full-stack) CMS platforms and five headless/API-first CMS platforms compared across 110 features in 24 categories.</p>
+    <p class="section-desc">Ten traditional (full-stack) CMS platforms and five headless/API-first CMS platforms compared across 110 features in 24 categories.</p>
   </div>
 
   <div class="cms-overview">
@@ -95,6 +95,16 @@ const { releases } = Astro.props;
       </div>
       <div class="tech"><span>TypeScript</span><span>Next.js</span><span>MongoDB/PgSQL</span></div>
       <span class="type-badge type-headless">Headless CMS + Framework</span>
+    </div>
+
+    <div class="cms-card" style="--card-color: var(--plone)">
+      <h3>Plone</h3>
+      <div class="version">v{releases.plone.latest_version} &middot; Python</div>
+      <div class="release-date">
+        <a href={releases.plone.release_url} target="_blank">released {releases.plone.release_date}</a>
+      </div>
+      <div class="tech"><span>Python 3.10+</span><span>Zope/Volto</span><span>ZODB/PostgreSQL</span></div>
+      <span class="type-badge type-traditional">Full-stack CMS</span>
     </div>
 
     <div class="cms-card" style="--card-color: var(--strapi)">

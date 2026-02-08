@@ -32,7 +32,9 @@
         "wa": "full",
         "wat": "Page types, StreamField blocks, Snippets, custom Django models",
         "um": "full",
-        "umt": "Document Types with properties, tabs, compositions"
+        "umt": "Document Types with properties, tabs, compositions",
+        "pl": "full",
+        "plt": "Dexterity content types — Pages, News, Events, custom types via TTW or filesystem"
       },
       {
         "name": "Field types & customization",
@@ -63,7 +65,9 @@
         "wa": "full",
         "wat": "StreamField 15+ block types, custom Django model fields",
         "um": "full",
-        "umt": "25+ property editors (text, RTE, media picker, content picker, etc.)"
+        "umt": "25+ property editors (text, RTE, media picker, content picker, etc.)",
+        "pl": "full",
+        "plt": "Dexterity 20+ field types (text, rich text, date, relation, file, image, etc.)"
       },
       {
         "name": "Multi-value (repeating) fields",
@@ -93,7 +97,9 @@
         "wa": "full",
         "wat": "StreamField — repeatable, nestable content blocks",
         "um": "full",
-        "umt": "Block List Editor, Block Grid Editor for repeatable content"
+        "umt": "Block List Editor, Block Grid Editor for repeatable content",
+        "pl": "partial",
+        "plt": "Dexterity list fields, Volto blocks for repeatable content"
       },
       {
         "name": "Field inheritance / reuse",
@@ -123,7 +129,9 @@
         "wa": "partial",
         "wat": "Django model inheritance, abstract pages, mixin classes",
         "um": "full",
-        "umt": "Compositions — share property groups across Document Types"
+        "umt": "Compositions — share property groups across Document Types",
+        "pl": "full",
+        "plt": "Dexterity behaviors — reusable field groups across content types"
       },
       {
         "name": "Computed fields",
@@ -153,7 +161,9 @@
         "wa": "partial",
         "wat": "Django model properties, template tags",
         "um": "partial",
-        "umt": "Via custom C# code, property value converters"
+        "umt": "Via custom C# code, property value converters",
+        "pl": "partial",
+        "plt": "Python class properties, catalog metadata computed at index time"
       },
       {
         "name": "Display modes (view modes)",
@@ -184,7 +194,9 @@
         "wa": "full",
         "wat": "Django templates per page type",
         "um": "full",
-        "umt": "Razor templates per Document Type"
+        "umt": "Razor templates per Document Type",
+        "pl": "full",
+        "plt": "TAL/Volto views per content type, browser views via ZCML"
       }
     ]
   },
@@ -220,7 +232,9 @@
         "wa": "none",
         "wat": "None — code-based Django ORM queries",
         "um": "none",
-        "umt": "None — code-based IPublishedContent queries"
+        "umt": "None — code-based IPublishedContent queries",
+        "pl": "partial",
+        "plt": "Collections (Smart Folders) with criteria-based query building"
       },
       {
         "name": "API query / filtering",
@@ -251,7 +265,9 @@
         "wa": "full",
         "wat": "Wagtail API v2 (REST) with filters, ordering, pagination",
         "um": "full",
-        "umt": "Content Delivery API (REST) with filtering, sorting (v12+)"
+        "umt": "Content Delivery API (REST) with filtering, sorting (v12+)",
+        "pl": "full",
+        "plt": "plone.restapi full filtering, sorting, batching via query parameters"
       },
       {
         "name": "Aggregation (COUNT/SUM/AVG)",
@@ -281,7 +297,9 @@
         "wa": "partial",
         "wat": "Django ORM aggregation",
         "um": "partial",
-        "umt": "Custom LINQ queries"
+        "umt": "Custom LINQ queries",
+        "pl": "partial",
+        "plt": "ZCatalog result count, custom aggregation via Python"
       },
       {
         "name": "Relationship traversal",
@@ -304,7 +322,9 @@
         "wa": "full",
         "wat": "Django ORM relationships, related pages",
         "um": "full",
-        "umt": "Content Picker, ancestor/descendant traversal"
+        "umt": "Content Picker, ancestor/descendant traversal",
+        "pl": "full",
+        "plt": "Dexterity relations, ZCatalog references, plone.restapi expansion"
       },
       {
         "name": "Bulk operations",
@@ -335,7 +355,9 @@
         "wa": "partial",
         "wat": "Limited bulk actions in admin",
         "um": "partial",
-        "umt": "Limited backoffice bulk actions"
+        "umt": "Limited backoffice bulk actions",
+        "pl": "full",
+        "plt": "Folder contents view with bulk copy, paste, delete, rename, change state"
       }
     ]
   },
@@ -367,7 +389,9 @@
         "wa": "full",
         "wat": "Django groups + Wagtail page permissions",
         "um": "full",
-        "umt": "User groups with section, node, Document Type permissions"
+        "umt": "User groups with section, node, Document Type permissions",
+        "pl": "full",
+        "plt": "Core RBAC — Manager, Editor, Contributor, Reviewer, Reader + custom roles"
       },
       {
         "name": "Field-level permissions",
@@ -397,7 +421,9 @@
         "wa": "none",
         "wat": "No field-level ACL in core",
         "um": "none",
-        "umt": "No field-level permissions in core"
+        "umt": "No field-level permissions in core",
+        "pl": "partial",
+        "plt": "Via Dexterity behaviors and custom permissions, not per-field granular"
       },
       {
         "name": "Content-level permissions",
@@ -428,7 +454,9 @@
         "wa": "full",
         "wat": "Page-level permissions per group (add/edit/publish/lock)",
         "um": "full",
-        "umt": "Per-node start node permissions, granular access"
+        "umt": "Per-node start node permissions, granular access",
+        "pl": "full",
+        "plt": "Per-item local roles and permissions via sharing tab"
       },
       {
         "name": "Dynamic permissions (edit own)",
@@ -458,7 +486,9 @@
         "wa": "partial",
         "wat": "Page ownership, custom middleware",
         "um": "partial",
-        "umt": "Custom via user groups and event handlers"
+        "umt": "Custom via user groups and event handlers",
+        "pl": "full",
+        "plt": "Ownership-based permissions, local roles, workflow guards"
       },
       {
         "name": "API access control",
@@ -484,7 +514,9 @@
         "wa": "full",
         "wat": "Django authentication + API token/session auth",
         "um": "full",
-        "umt": "API keys, OAuth 2.0 client credentials (Management API)"
+        "umt": "API keys, OAuth 2.0 client credentials (Management API)",
+        "pl": "full",
+        "plt": "plone.restapi respects all Plone security — roles, per-item, workflow state"
       }
     ]
   },
@@ -521,7 +553,9 @@
         "wa": "full",
         "wat": "Core live + draft revisions",
         "um": "full",
-        "umt": "Core Save & Publish workflow"
+        "umt": "Core Save & Publish workflow",
+        "pl": "full",
+        "plt": "Core workflow with private, pending review, published states"
       },
       {
         "name": "Custom workflow states",
@@ -551,7 +585,9 @@
         "wa": "full",
         "wat": "Workflows module (since v2.10) — custom tasks, approval chains",
         "um": "plugin",
-        "umt": "Umbraco Workflow package (official, commercial)"
+        "umt": "Umbraco Workflow package (official, commercial)",
+        "pl": "full",
+        "plt": "DCWorkflow — fully customizable states, transitions, guards, scripts"
       },
       {
         "name": "Scheduled publishing",
@@ -582,7 +618,9 @@
         "wa": "full",
         "wat": "Core go-live and expiry date per page",
         "um": "full",
-        "umt": "Core scheduled publish/unpublish dates"
+        "umt": "Core scheduled publish/unpublish dates",
+        "pl": "full",
+        "plt": "Core effective date + expiration date fields on all content"
       },
       {
         "name": "Editorial approval chain",
@@ -612,7 +650,9 @@
         "wa": "full",
         "wat": "Workflows — multi-step approval tasks",
         "um": "plugin",
-        "umt": "Umbraco Workflow — multi-stage approval"
+        "umt": "Umbraco Workflow — multi-stage approval",
+        "pl": "full",
+        "plt": "DCWorkflow with review states, approval transitions, permission guards"
       }
     ]
   },
@@ -648,7 +688,9 @@
         "wa": "full",
         "wat": "Core page revisions",
         "um": "full",
-        "umt": "Core version history per content node"
+        "umt": "Core version history per content node",
+        "pl": "full",
+        "plt": "CMFEditions — full version history for all versionable content types"
       },
       {
         "name": "Revision diff / comparison",
@@ -678,7 +720,9 @@
         "wa": "full",
         "wat": "Core comparison view in admin",
         "um": "partial",
-        "umt": "Version list, basic comparison"
+        "umt": "Version list, basic comparison",
+        "pl": "full",
+        "plt": "Core visual diff comparison between any two versions"
       },
       {
         "name": "Revision revert",
@@ -708,7 +752,9 @@
         "wa": "full",
         "wat": "Core revert to previous revision",
         "um": "full",
-        "umt": "Core rollback to any previous version"
+        "umt": "Core rollback to any previous version",
+        "pl": "full",
+        "plt": "One-click revert to any previous version via CMFEditions"
       },
       {
         "name": "Automatic vs manual revisions",
@@ -738,7 +784,9 @@
         "wa": "full",
         "wat": "Auto-saved drafts, manual publish creates revision",
         "um": "full",
-        "umt": "Auto-versioning on save/publish"
+        "umt": "Auto-versioning on save/publish",
+        "pl": "full",
+        "plt": "Auto-versioning on save, manual version creation supported"
       }
     ]
   },
@@ -774,7 +822,9 @@
         "wa": "full",
         "wat": "Core i18n (v2.11+) + wagtail-localize",
         "um": "full",
-        "umt": "Core language variants per property (since v8)"
+        "umt": "Core language variants per property (since v8)",
+        "pl": "full",
+        "plt": "plone.app.multilingual bundled — full content translation management"
       },
       {
         "name": "Admin UI translation",
@@ -804,7 +854,9 @@
         "wa": "full",
         "wat": "Django i18n, 40+ admin languages",
         "um": "full",
-        "umt": "Backoffice available in 20+ languages"
+        "umt": "Backoffice available in 20+ languages",
+        "pl": "full",
+        "plt": "Internationalized admin UI with 50+ language packs"
       },
       {
         "name": "Language fallback",
@@ -834,7 +886,9 @@
         "wa": "partial",
         "wat": "Via wagtail-localize settings",
         "um": "full",
-        "umt": "Core language fallback configuration"
+        "umt": "Core language fallback configuration",
+        "pl": "full",
+        "plt": "Language negotiation with configurable fallback chains"
       },
       {
         "name": "Field-level translatability",
@@ -864,7 +918,9 @@
         "wa": "full",
         "wat": "Per-field translatable via wagtail-localize",
         "um": "full",
-        "umt": "Per-property Vary by Culture flag"
+        "umt": "Per-property Vary by Culture flag",
+        "pl": "full",
+        "plt": "Per-field translation control, language-independent fields"
       },
       {
         "name": "Translation status overview",
@@ -894,7 +950,9 @@
         "wa": "partial",
         "wat": "wagtail-localize dashboard",
         "um": "partial",
-        "umt": "Content tree culture indicators, limited overview"
+        "umt": "Content tree culture indicators, limited overview",
+        "pl": "partial",
+        "plt": "Translation status indicators, linkable translations"
       }
     ]
   },
@@ -931,7 +989,9 @@
         "wa": "partial",
         "wat": "Page tree hierarchy, tags via django-taggit (flat)",
         "um": "full",
-        "umt": "Content tree hierarchy, Document Types as taxonomies"
+        "umt": "Content tree hierarchy, Document Types as taxonomies",
+        "pl": "full",
+        "plt": "Hierarchical vocabularies, category system"
       },
       {
         "name": "Vocabulary / tag system",
@@ -962,7 +1022,9 @@
         "wa": "full",
         "wat": "django-taggit integrated, ClusterTaggableManager",
         "um": "full",
-        "umt": "Core Tags property editor"
+        "umt": "Core Tags property editor",
+        "pl": "full",
+        "plt": "Tags (Subject field), custom vocabularies via zope.schema"
       },
       {
         "name": "Unlimited depth hierarchy",
@@ -985,7 +1047,9 @@
         "wa": "full",
         "wat": "Page tree — unlimited nesting",
         "um": "full",
-        "umt": "Content tree unlimited nesting"
+        "umt": "Content tree unlimited nesting",
+        "pl": "full",
+        "plt": "Folder-based hierarchy with unlimited depth"
       }
     ]
   },
@@ -1022,7 +1086,9 @@
         "wa": "partial",
         "wat": "Django fixtures, no native config sync",
         "um": "plugin",
-        "umt": "uSync plugin or Umbraco Deploy (Cloud) for config sync"
+        "umt": "uSync plugin or Umbraco Deploy (Cloud) for config sync",
+        "pl": "full",
+        "plt": "GenericSetup profiles — full config export/import as XML"
       },
       {
         "name": "Environment-specific config",
@@ -1053,7 +1119,9 @@
         "wa": "full",
         "wat": "Django settings per env, .env support",
         "um": "full",
-        "umt": ".NET appsettings.json per environment"
+        "umt": ".NET appsettings.json per environment",
+        "pl": "partial",
+        "plt": "Environment variables, buildout/pip profiles for env-specific config"
       },
       {
         "name": "Config versioning (git)",
@@ -1084,7 +1152,9 @@
         "wa": "full",
         "wat": "All config in Python code, git-ready",
         "um": "plugin",
-        "umt": "uSync exports to files for git, Deploy for Cloud"
+        "umt": "uSync exports to files for git, Deploy for Cloud",
+        "pl": "full",
+        "plt": "GenericSetup profiles stored as filesystem files, git-friendly"
       }
     ]
   },
@@ -1120,7 +1190,9 @@
         "wa": "partial",
         "wat": "Django management commands for import",
         "um": "partial",
-        "umt": "CMSImport package, custom .NET migration scripts"
+        "umt": "CMSImport package, custom .NET migration scripts",
+        "pl": "plugin",
+        "plt": "collective.transmogrifier for ETL pipelines"
       },
       {
         "name": "Incremental migrations",
@@ -1144,7 +1216,9 @@
         "wa": "none",
         "wat": "None",
         "um": "none",
-        "umt": "None"
+        "umt": "None",
+        "pl": "partial",
+        "plt": "Upgrade steps support incremental database migrations"
       },
       {
         "name": "Rollback capability",
@@ -1167,7 +1241,9 @@
         "wa": "none",
         "wat": "None",
         "um": "partial",
-        "umt": ".NET database migration rollback (schema only)"
+        "umt": ".NET database migration rollback (schema only)",
+        "pl": "partial",
+        "plt": "ZODB undo/pack for limited rollback, no formal migration rollback"
       },
       {
         "name": "Multiple source formats",
@@ -1198,7 +1274,9 @@
         "wa": "partial",
         "wat": "Custom Django management commands",
         "um": "partial",
-        "umt": "Custom .NET import scripts, CMSImport package"
+        "umt": "Custom .NET import scripts, CMSImport package",
+        "pl": "plugin",
+        "plt": "Via collective.transmogrifier pipelines for CSV, XML, JSON, etc."
       }
     ]
   },
@@ -1234,7 +1312,9 @@
         "wa": "full",
         "wat": "wagtail.contrib.forms — GUI form builder for pages",
         "um": "plugin",
-        "umt": "Umbraco Forms (official, paid) — GUI form builder"
+        "umt": "Umbraco Forms (official, paid) — GUI form builder",
+        "pl": "plugin",
+        "plt": "collective.easyform for visual form building (z3c.form core API)"
       },
       {
         "name": "Conditional / dynamic fields",
@@ -1264,7 +1344,9 @@
         "wa": "partial",
         "wat": "StreamField conditional rendering, custom JS",
         "um": "full",
-        "umt": "Core property conditions in Document Types"
+        "umt": "Core property conditions in Document Types",
+        "pl": "plugin",
+        "plt": "collective.easyform supports conditional logic"
       },
       {
         "name": "Custom validators",
@@ -1294,7 +1376,9 @@
         "wa": "full",
         "wat": "Django validators, Wagtail form page validation",
         "um": "full",
-        "umt": ".NET validation, custom server-side validators"
+        "umt": ".NET validation, custom server-side validators",
+        "pl": "full",
+        "plt": "Dexterity invariants and validators, z3c.form validation framework"
       }
     ]
   },
@@ -1331,7 +1415,9 @@
         "wa": "full",
         "wat": "Core image/document library with collections",
         "um": "full",
-        "umt": "Core Media section with folders, search, upload"
+        "umt": "Core Media section with folders, search, upload",
+        "pl": "full",
+        "plt": "Core image and file content types with folderish organization"
       },
       {
         "name": "Image manipulation",
@@ -1362,7 +1448,9 @@
         "wa": "full",
         "wat": "Image renditions, focal points, responsive images",
         "um": "full",
-        "umt": "Core Image Cropper, focal point, responsive presets"
+        "umt": "Core Image Cropper, focal point, responsive presets",
+        "pl": "full",
+        "plt": "Core image scaling, cropping, focal point support (Plone 6)"
       },
       {
         "name": "Reusable media entities",
@@ -1392,7 +1480,9 @@
         "wa": "full",
         "wat": "Images/documents as first-class models",
         "um": "full",
-        "umt": "Media items referenced across all content"
+        "umt": "Media items referenced across all content",
+        "pl": "full",
+        "plt": "Images/files as first-class content objects, reusable via relations"
       },
       {
         "name": "Remote media (YouTube etc.)",
@@ -1423,7 +1513,9 @@
         "wa": "plugin",
         "wat": "Core oEmbed finders + wagtail-embed-videos",
         "um": "partial",
-        "umt": "Embed datatype for external media"
+        "umt": "Embed datatype for external media",
+        "pl": "plugin",
+        "plt": "Via add-ons like collective.oembed or Volto video block"
       },
       {
         "name": "File usage tracking",
@@ -1453,7 +1545,9 @@
         "wa": "full",
         "wat": "Core usage tracking for images/documents (v4.0+)",
         "um": "full",
-        "umt": "Core media usage tracking (v10+)"
+        "umt": "Core media usage tracking (v10+)",
+        "pl": "partial",
+        "plt": "plone.app.linkintegrity — reference tracking for linked/embedded content"
       }
     ]
   },
@@ -1490,7 +1584,9 @@
         "wa": "partial",
         "wat": "Django cache framework, template fragment caching",
         "um": "partial",
-        "umt": "Output cache, Umbraco cache refresher"
+        "umt": "Output cache, Umbraco cache refresher",
+        "pl": "full",
+        "plt": "plone.app.caching with purging rules, ETags, conditional GET"
       },
       {
         "name": "Granular cache invalidation",
@@ -1521,7 +1617,9 @@
         "wa": "partial",
         "wat": "Django signals + cache invalidation, CDN plugins",
         "um": "partial",
-        "umt": "Content cache refresher on publish, HybridCache (v15+)"
+        "umt": "Content cache refresher on publish, HybridCache (v15+)",
+        "pl": "full",
+        "plt": "Per-content purge, proxy cache invalidation (Varnish integration)"
       },
       {
         "name": "BigPipe / progressive rendering",
@@ -1549,7 +1647,9 @@
         "wa": "none",
         "wat": "None — traditional Django rendering",
         "um": "none",
-        "umt": "None — traditional ASP.NET Core rendering"
+        "umt": "None — traditional ASP.NET Core rendering",
+        "pl": "none",
+        "plt": "No progressive rendering"
       }
     ]
   },
@@ -1586,7 +1686,9 @@
         "wa": "full",
         "wat": "Core search backends (PostgreSQL FTS, Elasticsearch)",
         "um": "full",
-        "umt": "Examine (Lucene.NET) — core full-text search"
+        "umt": "Examine (Lucene.NET) — core full-text search",
+        "pl": "full",
+        "plt": "ZCatalog with full-text indexing including PDF/Word content extraction"
       },
       {
         "name": "Faceted search",
@@ -1616,7 +1718,9 @@
         "wa": "plugin",
         "wat": "Via Elasticsearch integration",
         "um": "partial",
-        "umt": "Examine with custom facet indexing"
+        "umt": "Examine with custom facet indexing",
+        "pl": "plugin",
+        "plt": "eea.facetednavigation or collective.solr for faceted search"
       },
       {
         "name": "Search API abstraction",
@@ -1645,7 +1749,9 @@
         "wa": "full",
         "wat": "Pluggable search backends (database, Elasticsearch)",
         "um": "full",
-        "umt": "Examine — pluggable indexers (Lucene, Azure Search)"
+        "umt": "Examine — pluggable indexers (Lucene, Azure Search)",
+        "pl": "partial",
+        "plt": "ZCatalog API with pluggable backends (Solr, Elasticsearch via add-ons)"
       }
     ]
   },
@@ -1673,7 +1779,9 @@
         "wa": "full",
         "wat": "Page explorer with filters, search, status indicators",
         "um": "full",
-        "umt": "Content tree, list views with search, filters, sorting"
+        "umt": "Content tree, list views with search, filters, sorting",
+        "pl": "full",
+        "plt": "Folder contents view with filtering, sorting, column selection"
       },
       {
         "name": "Bulk operations UI",
@@ -1695,7 +1803,9 @@
         "wa": "partial",
         "wat": "Limited bulk actions in admin",
         "um": "partial",
-        "umt": "List view bulk actions (delete, move, publish)"
+        "umt": "List view bulk actions (delete, move, publish)",
+        "pl": "full",
+        "plt": "Folder contents bulk operations — copy, delete, rename, workflow transitions"
       },
       {
         "name": "Customizable dashboard",
@@ -1726,7 +1836,9 @@
         "wa": "full",
         "wat": "Dashboard panels, custom summary items, hooks",
         "um": "full",
-        "umt": "Custom dashboards, sections, trees in backoffice"
+        "umt": "Custom dashboards, sections, trees in backoffice",
+        "pl": "full",
+        "plt": "Customizable dashboard with portlets and Volto blocks"
       },
       {
         "name": "Admin themes / branding",
@@ -1757,7 +1869,9 @@
         "wa": "partial",
         "wat": "Custom logo, CSS overrides, limited theming",
         "um": "partial",
-        "umt": "Custom CSS, login screen branding, limited theming"
+        "umt": "Custom CSS, login screen branding, limited theming",
+        "pl": "partial",
+        "plt": "Volto theme customization, Diazo theming for Classic UI"
       }
     ]
   },
@@ -1794,7 +1908,9 @@
         "wa": "full",
         "wat": "Django manage.py + wagtail start CLI",
         "um": "full",
-        "umt": "dotnet CLI templates, Umbraco project scaffolding"
+        "umt": "dotnet CLI templates, Umbraco project scaffolding",
+        "pl": "full",
+        "plt": "plonecli scaffolding, cookieplone (cookiecutter), mxdev for development"
       },
       {
         "name": "Hook / event system",
@@ -1825,7 +1941,9 @@
         "wa": "full",
         "wat": "Wagtail hooks (30+) + Django signals",
         "um": "full",
-        "umt": "Notification handlers (100+ events), composers, pipeline"
+        "umt": "Notification handlers (100+ events), composers, pipeline",
+        "pl": "full",
+        "plt": "Zope Component Architecture — subscribers, handlers, event notification"
       },
       {
         "name": "Plugin/extension architecture",
@@ -1856,7 +1974,9 @@
         "wa": "full",
         "wat": "Django apps, 300+ Wagtail packages",
         "um": "full",
-        "umt": "NuGet packages, Umbraco Marketplace (2,000+ packages)"
+        "umt": "NuGet packages, Umbraco Marketplace (2,000+ packages)",
+        "pl": "full",
+        "plt": "Python packages via ZCA, 3,000+ add-ons on PyPI"
       },
       {
         "name": "TypeScript support",
@@ -1887,7 +2007,9 @@
         "wa": "none",
         "wat": "Python/Django — no TS",
         "um": "none",
-        "umt": "C#/.NET — no TS"
+        "umt": "C#/.NET — no TS",
+        "pl": "partial",
+        "plt": "Volto frontend in React/TypeScript, backend is Python-only"
       },
       {
         "name": "API docs auto-generation",
@@ -1918,7 +2040,9 @@
         "wa": "partial",
         "wat": "REST API browsable, no auto-schema in core",
         "um": "full",
-        "umt": "Swagger/OpenAPI for Content Delivery API"
+        "umt": "Swagger/OpenAPI for Content Delivery API",
+        "pl": "partial",
+        "plt": "plone.restapi OpenAPI-style documentation, Sphinx docs"
       }
     ]
   },
@@ -1955,7 +2079,9 @@
         "wa": "full",
         "wat": "Formal CVE process, security@wagtail.org",
         "um": "full",
-        "umt": "ISO 27001 certified, formal security process"
+        "umt": "ISO 27001 certified, formal security process",
+        "pl": "full",
+        "plt": "Dedicated security team, regular hotfixes, exemplary CVE track record"
       },
       {
         "name": "Input sanitization",
@@ -1977,7 +2103,9 @@
         "wa": "full",
         "wat": "Django auto-escaping, template system",
         "um": "full",
-        "umt": ".NET auto-encoding, Razor HTML escaping"
+        "umt": ".NET auto-encoding, Razor HTML escaping",
+        "pl": "full",
+        "plt": "Core HTML sanitization, safe_html transform, restricted Python"
       },
       {
         "name": "CSRF / XSS protection",
@@ -1999,7 +2127,9 @@
         "wa": "full",
         "wat": "Django CSRF middleware, template escaping",
         "um": "full",
-        "umt": "ASP.NET Core antiforgery tokens, auto-encoding"
+        "umt": "ASP.NET Core antiforgery tokens, auto-encoding",
+        "pl": "full",
+        "plt": "Core CSRF protection at transaction level (plone.protect), XSS prevention"
       },
       {
         "name": "SSO / SAML / LDAP",
@@ -2030,7 +2160,9 @@
         "wa": "plugin",
         "wat": "django-allauth, django-saml2-auth, python-ldap",
         "um": "plugin",
-        "umt": "External login providers (Azure AD, Google), community SAML packages"
+        "umt": "External login providers (Azure AD, Google), community SAML packages",
+        "pl": "full",
+        "plt": "PAS (Pluggable Authentication Service) — LDAP, SAML, OAuth, Shibboleth"
       },
       {
         "name": "Two-factor authentication (2FA)",
@@ -2061,7 +2193,9 @@
         "wa": "plugin",
         "wat": "django-otp, django-two-factor-auth",
         "um": "full",
-        "umt": "Core 2FA since Umbraco 10"
+        "umt": "Core 2FA since Umbraco 10",
+        "pl": "plugin",
+        "plt": "Via pas.plugins.authomatic or community PAS plugins"
       },
       {
         "name": "Password policy (complexity, expiry)",
@@ -2092,7 +2226,9 @@
         "wa": "partial",
         "wat": "Django AUTH_PASSWORD_VALIDATORS",
         "um": "full",
-        "umt": "ASP.NET Identity (configurable complexity, lockout)"
+        "umt": "ASP.NET Identity (configurable complexity, lockout)",
+        "pl": "plugin",
+        "plt": "Via Products.PasswordStrength or similar add-ons"
       },
       {
         "name": "Brute force / login flood protection",
@@ -2123,7 +2259,9 @@
         "wa": "partial",
         "wat": "django-axes, Django rate limiting",
         "um": "full",
-        "umt": "ASP.NET Identity account lockout"
+        "umt": "ASP.NET Identity account lockout",
+        "pl": "partial",
+        "plt": "Configurable lockout after failed attempts"
       },
       {
         "name": "Session timeout (auto-logout)",
@@ -2154,7 +2292,9 @@
         "wa": "full",
         "wat": "Django SESSION_COOKIE_AGE configurable",
         "um": "full",
-        "umt": "Configurable session timeout"
+        "umt": "Configurable session timeout",
+        "pl": "full",
+        "plt": "Configurable session timeout in security settings"
       },
       {
         "name": "Concurrent session limits",
@@ -2185,7 +2325,9 @@
         "wa": "none",
         "wat": "None",
         "um": "none",
-        "umt": "None"
+        "umt": "None",
+        "pl": "none",
+        "plt": "No native concurrent session limits"
       },
       {
         "name": "Security headers (CSP, HSTS, X-Frame)",
@@ -2216,7 +2358,9 @@
         "wa": "partial",
         "wat": "Django SecurityMiddleware (HSTS, X-Frame)",
         "um": "partial",
-        "umt": "Via ASP.NET Core middleware configuration"
+        "umt": "Via ASP.NET Core middleware configuration",
+        "pl": "partial",
+        "plt": "X-Frame-Options core, CSP/HSTS via web server or add-ons"
       },
       {
         "name": "CAPTCHA / bot protection",
@@ -2247,7 +2391,9 @@
         "wa": "plugin",
         "wat": "django-recaptcha, wagtail-captcha",
         "um": "plugin",
-        "umt": "Umbraco Forms reCAPTCHA, community packages"
+        "umt": "Umbraco Forms reCAPTCHA, community packages",
+        "pl": "plugin",
+        "plt": "plone.formwidget.recaptcha, collective.honeypot"
       },
       {
         "name": "Security change notifications",
@@ -2278,7 +2424,9 @@
         "wa": "partial",
         "wat": "Django signals for user changes",
         "um": "partial",
-        "umt": "ASP.NET Identity events, custom notification handlers"
+        "umt": "ASP.NET Identity events, custom notification handlers",
+        "pl": "partial",
+        "plt": "Security hotfix notifications, content rules for workflow changes"
       }
     ]
   },
@@ -2315,7 +2463,9 @@
         "wa": "full",
         "wat": "Core Wagtail API v2 (pages, images, documents)",
         "um": "full",
-        "umt": "Content Delivery API (v12+) + Management API (v14+)"
+        "umt": "Content Delivery API (v12+) + Management API (v14+)",
+        "pl": "full",
+        "plt": "plone.restapi — full CRUD, search, workflow, users, groups, content types"
       },
       {
         "name": "GraphQL API",
@@ -2345,7 +2495,9 @@
         "wa": "plugin",
         "wat": "wagtail-grapple",
         "um": "none",
-        "umt": "None — no native GraphQL"
+        "umt": "None — no native GraphQL",
+        "pl": "plugin",
+        "plt": "Via community add-ons (collective.graphql), limited adoption"
       },
       {
         "name": "Webhooks",
@@ -2376,7 +2528,9 @@
         "wa": "plugin",
         "wat": "django-webhooks, custom signals",
         "um": "full",
-        "umt": "Core webhooks (v12+)"
+        "umt": "Core webhooks (v12+)",
+        "pl": "none",
+        "plt": "No native webhook support — custom event subscribers possible"
       },
       {
         "name": "Rate limiting",
@@ -2406,7 +2560,9 @@
         "wa": "partial",
         "wat": "Django middleware, django-ratelimit",
         "um": "partial",
-        "umt": "Via ASP.NET Core middleware"
+        "umt": "Via ASP.NET Core middleware",
+        "pl": "none",
+        "plt": "No core rate limiting — handled by reverse proxy (Varnish/nginx)"
       },
       {
         "name": "Real-time / WebSockets",
@@ -2433,7 +2589,9 @@
         "wa": "none",
         "wat": "None — Django Channels possible but not built-in",
         "um": "none",
-        "umt": "None — SignalR possible via custom .NET"
+        "umt": "None — SignalR possible via custom .NET",
+        "pl": "none",
+        "plt": "No native WebSocket or real-time support"
       }
     ]
   },
@@ -2470,7 +2628,9 @@
         "wa": "full",
         "wat": "Core page slugs, URL paths",
         "um": "full",
-        "umt": "Core URL segments per content node"
+        "umt": "Core URL segments per content node",
+        "pl": "full",
+        "plt": "Automatic short names (IDs), customizable slugs per content"
       },
       {
         "name": "URL redirects",
@@ -2500,7 +2660,9 @@
         "wa": "full",
         "wat": "wagtail.contrib.redirects (core contrib)",
         "um": "full",
-        "umt": "Core URL Tracker — auto redirect on URL change"
+        "umt": "Core URL Tracker — auto redirect on URL change",
+        "pl": "full",
+        "plt": "plone.app.redirector — automatic redirect on rename/move"
       },
       {
         "name": "Menu system",
@@ -2531,7 +2693,9 @@
         "wa": "plugin",
         "wat": "wagtailmenus package",
         "um": "partial",
-        "umt": "Navigation via content tree, no dedicated menu manager"
+        "umt": "Navigation via content tree, no dedicated menu manager",
+        "pl": "full",
+        "plt": "Core navigation, sitemap, breadcrumbs, custom menu items"
       }
     ]
   },
@@ -2568,7 +2732,9 @@
         "wa": "plugin",
         "wat": "wagtail-ai package (OpenAI integration)",
         "um": "plugin",
-        "umt": "Community packages (uMind AI)"
+        "umt": "Community packages (uMind AI)",
+        "pl": "none",
+        "plt": "No built-in AI content writing"
       },
       {
         "name": "AI image generation",
@@ -2599,7 +2765,9 @@
         "wa": "none",
         "wat": "None",
         "um": "none",
-        "umt": "None"
+        "umt": "None",
+        "pl": "none",
+        "plt": "No built-in AI image generation"
       },
       {
         "name": "AI-powered translation",
@@ -2630,7 +2798,9 @@
         "wa": "none",
         "wat": "None",
         "um": "plugin",
-        "umt": "Community packages (DeepL integration)"
+        "umt": "Community packages (DeepL integration)",
+        "pl": "none",
+        "plt": "No built-in AI translation"
       },
       {
         "name": "AI metadata / auto-tagging / alt text",
@@ -2661,7 +2831,9 @@
         "wa": "plugin",
         "wat": "wagtail-ai accessibility checks (concept)",
         "um": "none",
-        "umt": "None"
+        "umt": "None",
+        "pl": "none",
+        "plt": "No built-in AI metadata or auto-tagging"
       },
       {
         "name": "AI search (RAG / semantic / vector)",
@@ -2692,7 +2864,9 @@
         "wa": "none",
         "wat": "None — roadmap item",
         "um": "none",
-        "umt": "None"
+        "umt": "None",
+        "pl": "none",
+        "plt": "No built-in AI search"
       },
       {
         "name": "AI chatbot / assistant",
@@ -2723,7 +2897,9 @@
         "wa": "none",
         "wat": "None",
         "um": "none",
-        "umt": "None"
+        "umt": "None",
+        "pl": "none",
+        "plt": "No built-in AI chatbot"
       },
       {
         "name": "AI content moderation / validation",
@@ -2754,7 +2930,9 @@
         "wa": "none",
         "wat": "None",
         "um": "none",
-        "umt": "None"
+        "umt": "None",
+        "pl": "none",
+        "plt": "No built-in AI content moderation"
       },
       {
         "name": "AI provider framework (multi-provider)",
@@ -2785,7 +2963,9 @@
         "wa": "partial",
         "wat": "wagtail-ai — LLM integration, limited providers",
         "um": "none",
-        "umt": "None"
+        "umt": "None",
+        "pl": "none",
+        "plt": "No AI provider framework"
       }
     ]
   },
@@ -2822,7 +3002,9 @@
         "wa": "full",
         "wat": "Core live preview in admin",
         "um": "full",
-        "umt": "Core content preview, Canvas mode"
+        "umt": "Core content preview, Canvas mode",
+        "pl": "full",
+        "plt": "Volto inline block editing with real-time preview"
       },
       {
         "name": "Visual page builder (drag & drop)",
@@ -2853,7 +3035,9 @@
         "wa": "partial",
         "wat": "StreamField block insertion/reordering, not true D&D",
         "um": "full",
-        "umt": "Block Grid Editor — drag-and-drop layout (v10.4+)"
+        "umt": "Block Grid Editor — drag-and-drop layout (v10.4+)",
+        "pl": "full",
+        "plt": "Volto block editor — drag-and-drop page composition with 20+ block types"
       },
       {
         "name": "Inline / on-page editing",
@@ -2884,7 +3068,9 @@
         "wa": "partial",
         "wat": "Preview-based editing, not true inline",
         "um": "partial",
-        "umt": "Preview mode, not true inline editing"
+        "umt": "Preview mode, not true inline editing",
+        "pl": "full",
+        "plt": "Volto — inline editing of content directly on the page"
       }
     ]
   },
@@ -2921,7 +3107,9 @@
         "wa": "full",
         "wat": "Core — Site model, multiple sites from one install",
         "um": "full",
-        "umt": "Core multi-site with domain bindings"
+        "umt": "Core multi-site with domain bindings",
+        "pl": "full",
+        "plt": "Multiple Plone sites in one Zope instance"
       },
       {
         "name": "Content sharing across sites",
@@ -2952,7 +3140,9 @@
         "wa": "full",
         "wat": "Shared page tree and snippets across sites",
         "um": "full",
-        "umt": "Shared content tree, configurable start nodes"
+        "umt": "Shared content tree, configurable start nodes",
+        "pl": "partial",
+        "plt": "Content reuse via references, no native cross-site sharing"
       },
       {
         "name": "White-label / tenant branding",
@@ -2983,7 +3173,9 @@
         "wa": "partial",
         "wat": "Custom admin CSS, logo per site",
         "um": "partial",
-        "umt": "Custom login branding, limited admin theming"
+        "umt": "Custom login branding, limited admin theming",
+        "pl": "partial",
+        "plt": "Per-site Diazo/Volto theming, limited tenant branding"
       }
     ]
   },
@@ -3020,7 +3212,9 @@
         "wa": "none",
         "wat": "None",
         "um": "plugin",
-        "umt": "Umbraco Engage (official, paid)"
+        "umt": "Umbraco Engage (official, paid)",
+        "pl": "none",
+        "plt": "No built-in personalization engine"
       },
       {
         "name": "A/B testing",
@@ -3050,7 +3244,9 @@
         "wa": "none",
         "wat": "None",
         "um": "plugin",
-        "umt": "Umbraco Engage (official, paid)"
+        "umt": "Umbraco Engage (official, paid)",
+        "pl": "none",
+        "plt": "No built-in A/B testing"
       },
       {
         "name": "Built-in analytics",
@@ -3081,7 +3277,9 @@
         "wa": "none",
         "wat": "None — external integrations",
         "um": "plugin",
-        "umt": "Umbraco Engage (official, paid)"
+        "umt": "Umbraco Engage (official, paid)",
+        "pl": "none",
+        "plt": "No built-in analytics — integration via add-ons"
       }
     ]
   },
@@ -3118,7 +3316,9 @@
         "wa": "full",
         "wat": "Dedicated accessibility team, ATAG compliance, admin a11y",
         "um": "partial",
-        "umt": "Accessible backoffice UI, Tiptap editor a11y"
+        "umt": "Accessible backoffice UI, Tiptap editor a11y",
+        "pl": "full",
+        "plt": "Core WCAG focus, Volto React Aria components, accessibility-first design"
       },
       {
         "name": "Alt text enforcement / a11y checks",
@@ -3149,7 +3349,9 @@
         "wa": "full",
         "wat": "Configurable alt text requirement, accessibility checker",
         "um": "partial",
-        "umt": "Alt text field available, not enforced"
+        "umt": "Alt text field available, not enforced",
+        "pl": "partial",
+        "plt": "Alt text field on images, no automated enforcement in core"
       }
     ]
   },
@@ -3186,7 +3388,9 @@
         "wa": "full",
         "wat": "Core SEO fields (search_description), Promote tab",
         "um": "partial",
-        "umt": "Custom Document Type properties, SEO packages"
+        "umt": "Custom Document Type properties, SEO packages",
+        "pl": "full",
+        "plt": "Core Dublin Core metadata — title, description on all content"
       },
       {
         "name": "Open Graph / Twitter Cards",
@@ -3217,7 +3421,9 @@
         "wa": "plugin",
         "wat": "wagtail-metadata, wagtail-seo packages",
         "um": "partial",
-        "umt": "Custom Document Type properties, community packages"
+        "umt": "Custom Document Type properties, community packages",
+        "pl": "partial",
+        "plt": "Basic social meta via Dublin Core, full OG requires add-ons"
       },
       {
         "name": "XML sitemap generation",
@@ -3248,7 +3454,9 @@
         "wa": "full",
         "wat": "wagtail.contrib.sitemaps (core contrib)",
         "um": "plugin",
-        "umt": "Community packages (SEO Toolkit, sitemap generators)"
+        "umt": "Community packages (SEO Toolkit, sitemap generators)",
+        "pl": "full",
+        "plt": "Core sitemap.xml.gz generation via plone.app.layout"
       },
       {
         "name": "Canonical URL management",
@@ -3279,7 +3487,9 @@
         "wa": "partial",
         "wat": "Manual via page models, no core auto-canonical",
         "um": "partial",
-        "umt": "Custom via Document Type properties"
+        "umt": "Custom via Document Type properties",
+        "pl": "full",
+        "plt": "Core canonical URL support via plone.app.layout"
       },
       {
         "name": "Schema.org / structured data (JSON-LD)",
@@ -3310,7 +3520,9 @@
         "wa": "partial",
         "wat": "Custom via templates",
         "um": "partial",
-        "umt": "Custom via Razor templates"
+        "umt": "Custom via Razor templates",
+        "pl": "plugin",
+        "plt": "Via add-ons or custom Volto components"
       },
       {
         "name": "Robots meta / noindex control",
@@ -3341,7 +3553,9 @@
         "wa": "partial",
         "wat": "Custom via page models, wagtail-seo plugin",
         "um": "partial",
-        "umt": "Custom Document Type properties"
+        "umt": "Custom Document Type properties",
+        "pl": "full",
+        "plt": "Core robots.txt and noindex meta tag control"
       },
       {
         "name": "Hreflang tags (multilingual SEO)",
@@ -3372,7 +3586,9 @@
         "wa": "partial",
         "wat": "Via wagtail-localize + custom templates",
         "um": "partial",
-        "umt": "Custom via Razor templates with language variants"
+        "umt": "Custom via Razor templates with language variants",
+        "pl": "full",
+        "plt": "plone.app.multilingual generates hreflang tags"
       },
       {
         "name": "Breadcrumbs",
@@ -3403,7 +3619,9 @@
         "wa": "full",
         "wat": "Core page tree breadcrumbs",
         "um": "full",
-        "umt": "Core content tree ancestor traversal"
+        "umt": "Core content tree ancestor traversal",
+        "pl": "full",
+        "plt": "Core breadcrumb navigation component"
       },
       {
         "name": "Real-time SEO analysis / content scoring",
@@ -3434,7 +3652,9 @@
         "wa": "none",
         "wat": "None",
         "um": "plugin",
-        "umt": "SEO Checker package"
+        "umt": "SEO Checker package",
+        "pl": "none",
+        "plt": "No built-in SEO analysis or scoring"
       }
     ]
   }

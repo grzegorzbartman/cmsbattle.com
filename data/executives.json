@@ -160,6 +160,26 @@
     "avoidIf": "You need a GUI content modeler for non-technical users, or migrating from legacy CMS."
   },
   {
+    "name": "Plone 6",
+    "color": "var(--plone)",
+    "strengths": [
+      "Best-in-class security — lowest CVE count among major CMS, no zero-day exploits, trusted by CIA, FBI, NATO",
+      "Comprehensive workflow — DCWorkflow with unlimited states, transitions, and guards; full versioning via CMFEditions",
+      "Volto — modern React-based frontend with block editing, inline editing, and drag-and-drop page composition",
+      "Enterprise multilingual — plone.app.multilingual bundled, full per-field translation with language negotiation",
+      "Exceptional access control — granular RBAC with per-item permissions, local roles, and workflow-driven security"
+    ],
+    "weaknesses": [
+      "Python/Zope stack — niche technology, smaller developer pool than PHP or Node.js CMS",
+      "No AI features — no content generation, image AI, translation AI, or AI-powered tools",
+      "Steep learning curve — Zope Component Architecture (ZCA) is complex for newcomers",
+      "Declining market share — shrinking community, many add-ons not updated for Plone 6/Volto",
+      "Low GitHub stars misleading — project split across 300+ repos, makes ecosystem look smaller than it is"
+    ],
+    "bestFor": "Enterprise organizations needing maximum security (government, defense, finance), complex workflows, multilingual content, and Python/Zope expertise.",
+    "avoidIf": "You need AI features, a large modern plugin ecosystem, quick MVP development, or a team unfamiliar with Python/Zope."
+  },
+  {
     "name": "Strapi v5",
     "color": "var(--strapi)",
     "strengths": [

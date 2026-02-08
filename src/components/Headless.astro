@@ -2,7 +2,7 @@
   <div class="section-header">
     <div class="section-tag">03b &mdash; headless mode</div>
     <h2>Full-stack CMS as headless / hybrid</h2>
-    <p class="section-desc">All nine traditional CMS platforms can also serve content via API, working as headless or hybrid (server-rendered + API) systems. Here's how they compare in that mode.</p>
+    <p class="section-desc">All ten traditional CMS platforms can also serve content via API, working as headless or hybrid (server-rendered + API) systems. Here's how they compare in that mode.</p>
   </div>
 
   <div class="headless-grid">
@@ -180,6 +180,49 @@
         <div class="meta-row">
           <span class="meta-label">Headless maturity</span>
           <span class="meta-val">API since Joomla 4 (2021). Functional but ecosystem/docs for headless use are limited.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PLONE -->
+    <div class="headless-card" style="--card-color: var(--plone)">
+      <div class="headless-card-header">
+        <h3>Plone</h3>
+        <span class="headless-verdict headless-good">Good headless</span>
+      </div>
+      <p class="headless-desc">Plone ships with plone.restapi, a comprehensive REST API that exposes all content, users, groups, workflows, and search. The Volto frontend itself is a React SPA consuming this API, proving its production-readiness.</p>
+      <div class="headless-apis">
+        <div class="api-item api-core">
+          <span class="api-label">REST API</span>
+          <span class="api-status">Core</span>
+          <span class="api-detail">plone.restapi — full CRUD for content, users, groups, workflow transitions, search, vocabularies. JSON output with batching and expansion.</span>
+        </div>
+        <div class="api-item api-contrib">
+          <span class="api-label">GraphQL</span>
+          <span class="api-status">Add-on</span>
+          <span class="api-detail">collective.graphql (community). Limited adoption — most projects use REST.</span>
+        </div>
+      </div>
+      <div class="headless-meta">
+        <div class="meta-row">
+          <span class="meta-label">Hybrid mode</span>
+          <span class="meta-val">Yes &mdash; Classic UI (server-rendered TAL/Chameleon templates) + REST API for Volto or external consumers</span>
+        </div>
+        <div class="meta-row">
+          <span class="meta-label">Popular frontends</span>
+          <span class="meta-val">Volto (React, official), Next.js, Gatsby, custom SPA</span>
+        </div>
+        <div class="meta-row">
+          <span class="meta-label">SDKs / helpers</span>
+          <span class="meta-val">@plone/client (JS), @plone/components (React), plone.restapi (Python)</span>
+        </div>
+        <div class="meta-row">
+          <span class="meta-label">Auth for API</span>
+          <span class="meta-val">JWT tokens, session auth, PAS (Pluggable Authentication Service)</span>
+        </div>
+        <div class="meta-row">
+          <span class="meta-label">Headless maturity</span>
+          <span class="meta-val">plone.restapi since 2016. Volto (React frontend) is the default since Plone 6 (2022), proving full headless capability.</span>
         </div>
       </div>
     </div>
@@ -414,7 +457,7 @@
   <div class="method-note" style="margin-top: 1.5rem;">
     <div class="note-icon">!</div>
     <div>
-      <strong>Note:</strong> The 5 headless CMS platforms (Directus, Ghost, KeystoneJS, Payload, Strapi) are <em>API-only by design</em> &mdash; they don't have a traditional server-rendered frontend. The comparison above focuses on the 9 full-stack CMS platforms and their ability to also work in headless/hybrid mode.
+      <strong>Note:</strong> The 5 headless CMS platforms (Directus, Ghost, KeystoneJS, Payload, Strapi) are <em>API-only by design</em> &mdash; they don't have a traditional server-rendered frontend. The comparison above focuses on the 10 full-stack CMS platforms and their ability to also work in headless/hybrid mode.
     </div>
   </div>
 </section>
